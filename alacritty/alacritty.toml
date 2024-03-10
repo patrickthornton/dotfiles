@@ -1,0 +1,24 @@
+[shell]
+program = "/usr/local/bin/nu"
+
+# multiplexer approach
+# [shell]
+# program = "/usr/local/bin/zellij"
+# args = ["options", "--default-shell", "nu"]
+
+[env]
+TERM = "xterm-256color"
+
+[font]
+size = 13.0
+
+[font.normal]
+family = "MesloLGS Nerd Font Mono"
+
+[window]
+startup_mode = "Fullscreen"
+decorations = "None"
+option_as_alt = "Both"
+
+[mouse]
+hide_when_typing = true

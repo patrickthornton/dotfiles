@@ -1,0 +1,58 @@
+format = '''$character'''
+
+right_format = """
+$username\
+$hostname\
+$localip\
+$shlvl\
+$singularity\
+$kubernetes\
+$directory\
+$vcsh\
+$fossil_branch\
+$fossil_metrics\
+$git_branch\
+$git_commit\
+$git_state\
+$git_metrics\
+$git_status\
+$hg_branch\
+$pijul_channel\
+$docker_context\
+$package\
+$nix_shell\
+$conda\
+$meson\
+$spack\
+$memory_usage\
+$aws\
+$gcloud\
+$openstack\
+$azure\
+$direnv\
+$env_var\
+$crystal\
+$custom\
+$sudo\
+$cmd_duration\
+$line_break\
+$jobs\
+$battery\
+$time\
+$status\
+$os\
+$container\
+$shell"""
+
+[time]
+disabled = false
+format = '[$time]($style)'
+time_format = '%l:%M %P'
+style = 'bold blue'
+use_12hr = true
+
+[git_status]
+style = 'bold yellow'
+
+[git_metrics]
+disabled = false

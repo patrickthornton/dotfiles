@@ -1,0 +1,8 @@
+
+
+# mac
+.DS_Store
+Desktop.ini
+
+# specific to dotfiles
+nushell/history.txt

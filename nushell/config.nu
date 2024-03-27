@@ -26,10 +26,14 @@ alias cs = hx ~/.config/starship.toml
 alias ch = hx `~/.config/helix`
 alias cz = hx `~/.config/zellij`
 
+alias cpg = cp `~/dotfiles/.gitignore` `.gitignore`
+
 alias g = git
 alias gc = gh repo clone
 alias gi = gh repo create
 alias gv = gh repo view -w
+
+alias h = hx
 
 alias j = zellij
 
@@ -40,6 +44,7 @@ alias na = bun add
 alias nc = bun create
 alias ncs = bun create svelte@latest
 alias ni = bun install
+alias nv = bun remove
 # alias nii = rm -rf node_modules; bun install
 alias nr = bun --bun run dev
 alias nb = bun --bun run build
@@ -49,7 +54,12 @@ def md [dir: directory] {
     cd $dir
 }
 
-alias p = python3.12
+alias p = `~/.python/3.12/bin/python`
+alias pip = uv pip
+alias pi = uv pip install
+alias pu = uv pip uninstall
+alias ps = uv pip sync
+alias pl = uv pip list
 
 alias q = exit
 

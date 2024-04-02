@@ -98,7 +98,7 @@ $env.NU_PLUGIN_DIRS = [
 ]
 
 # other random things
-$env.SHELL = "nu"
+$env.SHELL = "/usr/local/bin/nu"
 $env.EDITOR = "hx"
 # $env.MANPAGER = "hx"
 

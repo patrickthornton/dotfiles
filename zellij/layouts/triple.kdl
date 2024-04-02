@@ -3,7 +3,7 @@ layout {
 		pane
 		pane {
 			pane
-			pane command="btop"
+			pane
 		}
 	}
 }

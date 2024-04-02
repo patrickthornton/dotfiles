@@ -25,6 +25,7 @@ alias ca = hx ~/.config/alacritty/alacritty.toml
 alias cs = hx ~/.config/starship.toml
 alias ch = hx `~/.config/helix`
 alias cz = hx `~/.config/zellij`
+alias cg = hx ~/dotfiles/gdb/.gdbinit
 
 alias cpg = cp `~/dotfiles/.gitignore` `.gitignore`
 
@@ -33,11 +34,17 @@ alias gc = gh repo clone
 alias gi = gh repo create
 alias gv = gh repo view -w
 
+alias gb = gdb -x ~/dotfiles/gdb/.gdbinit
+
 alias h = hx
 
 alias j = zellij
 
+alias jl = jless
+
 alias lg = lazygit
+
+alias m = miniserve
 
 alias n = bun
 alias na = bun add
@@ -49,12 +56,14 @@ alias nv = bun remove
 alias nr = bun --bun run dev
 alias nb = bun --bun run build
 
+alias nf = neofetch
+
 def md [dir: directory] {
     mkdir $dir
     cd $dir
 }
 
-alias p = `~/.python/3.12/bin/python`
+alias p = `~/.venv/bin/python`
 alias pip = uv pip
 alias pi = uv pip install
 alias pu = uv pip uninstall

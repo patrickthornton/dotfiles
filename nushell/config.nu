@@ -20,11 +20,11 @@ alias bt = btop
 alias c = cd
 alias cb = cd `..`
 
-alias cn = hx `~/Library/Application Support/nushell`
-alias ca = hx ~/.config/alacritty/alacritty.toml
-alias cs = hx ~/.config/starship.toml
-alias ch = hx `~/.config/helix`
-alias cz = hx `~/.config/zellij`
+alias cn = hx ~/dotfiles/nushell
+alias ca = hx ~/dotfiles/alacritty
+alias cs = hx ~/dotfiles/starship
+alias ch = hx ~/dotfiles/helix
+alias cz = hx ~/dotfiles/zellij
 alias cg = hx ~/dotfiles/gdb/.gdbinit
 
 alias cpg = cp `~/dotfiles/.gitignore` `.gitignore`

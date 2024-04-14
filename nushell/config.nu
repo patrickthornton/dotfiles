@@ -13,7 +13,6 @@ alias bi = brew install
 alias bu = brew uninstall
 alias bl = brew list
 alias bd = brew doctor
-alias u = brew upgrade
 
 alias bt = btop
 
@@ -58,6 +57,21 @@ alias nb = bun --bun run build
 
 alias nf = neofetch
 
+alias o = cargo
+alias on = cargo new
+alias onn = cargo new --vcs none
+alias ob = cargo build
+alias obr = cargo build --release
+alias or = cargo run
+alias orr = cargo run --release
+alias oc = cargo check
+alias odc = cargo doc
+alias ot = cargo test
+alias otn = cargo test -- --nocapture
+alias otr = cargo test --release
+alias otrn = cargo test --release -- --nocapture
+alias oy = cargo clippy
+
 def md [dir: directory] {
     mkdir $dir
     cd $dir
@@ -79,6 +93,10 @@ alias s = starship
 alias shsh = ssh student@192.168.26.2
 
 alias zh = zed `.`
+
+def u [] {
+    brew upgrade
+}
 
 
 

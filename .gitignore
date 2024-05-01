@@ -5,6 +5,9 @@
 *.py[cod]
 __pycache__
 
+# rust
+/target
+
 # svelte
 node_modules
 /build

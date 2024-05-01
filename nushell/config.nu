@@ -30,12 +30,21 @@ alias cpg = cp `~/dotfiles/.gitignore` `.gitignore`
 
 alias g = git
 alias gc = gh repo clone
-alias gi = gh repo create
+
+def gi [] {
+    git init
+    gh repo create
+}
+
 alias gv = gh repo view -w
 
 alias gb = gdb -x ~/dotfiles/gdb/.gdbinit
 
 alias h = hx
+
+alias hf = hyperfine --warmup 3 --runs 10 --export-markdown benchmark.md -u second
+
+alias ht = /usr/local/bin/http
 
 alias j = zellij
 
@@ -58,6 +67,7 @@ alias nb = bun --bun run build
 alias nf = neofetch
 
 alias o = cargo
+alias oa = cargo add
 alias on = cargo new
 alias onn = cargo new --vcs none
 alias ob = cargo build
@@ -92,13 +102,13 @@ alias s = starship
 
 alias shsh = ssh student@192.168.26.2
 
+alias tk = tokei
+
 alias zh = zed `.`
 
 def u [] {
     brew upgrade
 }
-
-
 
 alias abcdefghijklmnopqrstuvwxyz = echo "yay!!"
 

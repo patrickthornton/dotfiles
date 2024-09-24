@@ -41,7 +41,8 @@ alias gb = gdb -x ~/dotfiles/gdb/.gdbinit
 
 alias h = hx
 
-alias hf = hyperfine --warmup 3 --runs 10 --export-markdown benchmark.md -u second
+alias hf = hyperfine
+alias hff = hyperfine --warmup 3 --runs 10 --export-markdown benchmark.md -u second
 
 alias ht = /opt/homebrew/bin/http
 
@@ -69,6 +70,8 @@ alias o = cargo
 alias oa = cargo add
 alias on = cargo new
 alias onn = cargo new --vcs none
+alias onl = cargo new --lib
+alias onnl = cargo new --vcs none --lib
 alias ob = cargo build
 alias obr = cargo build --release
 alias or = cargo run
@@ -81,16 +84,25 @@ alias otr = cargo test --release
 alias otrn = cargo test --release -- --nocapture
 alias oy = cargo clippy
 
+alias op = /usr/bin/open .
+
+alias ou = overlay use
+alias ous = overlay use ~/.venv/bin/activate.nu
+alias oul = overlay use .venv/bin/activate.nu
+alias oh = overlay hide
+
 def md [dir: directory] {
     mkdir $dir
     cd $dir
 }
 
-alias p = `~/.venv/bin/python`
+alias p = python
+alias ps = `~/.venv/bin/python`
 alias pip = uv pip
 alias pi = uv pip install
+alias pe = uv pip install -e .
 alias pu = uv pip uninstall
-alias ps = uv pip sync
+alias pc = uv pip sync
 alias pl = uv pip list
 
 alias q = exit
@@ -342,7 +354,7 @@ $env.config = {
     }
 
     color_config: $dark_theme # if you want a more interesting theme, you can replace the empty record with `$dark_theme`, `$light_theme` or another custom record
-    use_grid_icons: true
+    # use_grid_icons: true
     footer_mode: "25" # always, never, number_of_rows, auto
     float_precision: 2 # the precision for displaying floats in tables
     buffer_editor: "" # command that will be used to edit the current line buffer with ctrl+o, if unset fallback to $env.EDITOR and $env.VISUAL

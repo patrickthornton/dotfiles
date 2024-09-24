@@ -6,7 +6,7 @@
 __pycache__
 
 # rust
-/target
+**/target
 
 # svelte
 node_modules
@@ -23,6 +23,9 @@ vite.config.ts.timestamp-*
 # mac
 .DS_Store
 Desktop.ini
+
+# zed
+pyrightconfig.json
 
 # specific to dotfiles
 nushell/history.txt

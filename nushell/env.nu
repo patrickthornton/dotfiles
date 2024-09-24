@@ -107,6 +107,9 @@ $env.EDITOR = "zed"
 $env.PATH = ($env.PATH | split row (char esep) | append '/opt/homebrew/bin')
 $env.PATH = ($env.PATH | split row (char esep) | append '~/.cargo/bin')
 
+# for dyld to find c libraries
+$env.DYLD_LIBRARY_PATH = "/usr/local/lib"
+
 # for z
 zoxide init nushell | save -f ~/.zoxide.nu
 

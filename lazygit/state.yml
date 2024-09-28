@@ -1,0 +1,25 @@
+lastupdatecheck: 0
+recentrepos:
+    - /Users/patrickthornton/dotfiles
+    - /Users/patrickthornton/Documents/stuff/am207
+    - /Users/patrickthornton/Documents/stuff/am215/class_repo
+    - /Users/patrickthornton/Documents/stuff/am215/sandbox
+    - /Users/patrickthornton/Documents/stuff/am205
+    - /Users/patrickthornton/Documents/stuff/cs50/problems
+    - /Users/patrickthornton/Documents/stuff/cs50/check50
+    - /Users/patrickthornton/Documents/stuff/cs50/volume
+    - /Users/patrickthornton/Documents/stuff/cs50/cs50.readthedocs.io
+    - /../../../../../../Users/patrickthornton/dotfiles
+    - /Users/patrickthornton/Documents/stuff/sands/http/codecrafters-sqlite-rust
+    - /Users/patrickthornton/Documents/stuff/sands/http/codecrafters-http-server-rust
+startuppopupversion: 5
+lastversion: 0.44.1
+customcommandshistory: []
+hidecommandlog: false
+ignorewhitespaceindiffview: false
+diffcontextsize: 3
+renamesimilaritythreshold: 50
+localbranchsortorder: recency
+remotebranchsortorder: alphabetical
+gitlogorder: topo-order
+gitlogshowgraph: always

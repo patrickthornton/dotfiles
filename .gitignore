@@ -4,6 +4,8 @@
 # python
 *.py[cod]
 __pycache__
+**/.ipynb_checkpoints
+pyrightconfig.json
 
 # rust
 **/target
@@ -23,9 +25,6 @@ vite.config.ts.timestamp-*
 # mac
 .DS_Store
 Desktop.ini
-
-# zed
-pyrightconfig.json
 
 # specific to dotfiles
 nushell/history.txt

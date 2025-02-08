@@ -1,4 +1,4 @@
-[shell]
+[terminal.shell]
 program = "/opt/homebrew/bin/nu"
 
 # multiplexer approach
@@ -22,3 +22,5 @@ option_as_alt = "Both"
 
 [mouse]
 hide_when_typing = true
+
+[terminal]

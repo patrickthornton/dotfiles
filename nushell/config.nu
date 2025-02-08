@@ -37,7 +37,7 @@ def gi [] {
 
 alias gv = gh repo view -w
 
-alias gb = gdb -x ~/dotfiles/gdb/.gdbinit
+alias gdb = /usr/local/bin/gdb -x ~/dotfiles/gdb/.gdbinit
 
 alias h = hx
 
@@ -53,6 +53,8 @@ alias jl = jless
 alias lg = lazygit
 
 alias m = miniserve
+
+alias mr = make run
 
 alias n = bun
 alias na = bun add
@@ -120,6 +122,11 @@ alias zh = zed `.`
 def u [] {
     brew upgrade
 }
+
+alias ui = uv init
+alias ua = uv add
+alias ur = uv remove
+alias us = uv sync
 
 alias abcdefghijklmnopqrstuvwxyz = echo "yay!!"
 
@@ -342,10 +349,10 @@ $env.config = {
         use_ls_colors: true # set this to true to enable file/path/directory completions using LS_COLORS
     }
 
-    filesize: {
-        metric: false # true => KB, MB, GB (ISO standard), false => KiB, MiB, GiB (Windows standard)
-        format: "auto" # b, kb, kib, mb, mib, gb, gib, tb, tib, pb, pib, eb, eib, auto
-    }
+    # filesize: {
+    #     metric: false # true => KB, MB, GB (ISO standard), false => KiB, MiB, GiB (Windows standard)
+    #     format: "auto" # b, kb, kib, mb, mib, gb, gib, tb, tib, pb, pib, eb, eib, auto
+    # }
 
     cursor_shape: {
         emacs: line # block, underscore, line, blink_block, blink_underscore, blink_line, inherit to skip setting cursor shape (line is the default)
@@ -355,7 +362,7 @@ $env.config = {
 
     color_config: $dark_theme # if you want a more interesting theme, you can replace the empty record with `$dark_theme`, `$light_theme` or another custom record
     # use_grid_icons: true
-    footer_mode: "25" # always, never, number_of_rows, auto
+    footer_mode: "never" # always, never, number_of_rows, auto
     float_precision: 2 # the precision for displaying floats in tables
     buffer_editor: "" # command that will be used to edit the current line buffer with ctrl+o, if unset fallback to $env.EDITOR and $env.VISUAL
     use_ansi_coloring: true

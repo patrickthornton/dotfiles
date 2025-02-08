@@ -1,21 +1,34 @@
 lastupdatecheck: 0
 recentrepos:
     - /Users/patrickthornton/dotfiles
-    - /Users/patrickthornton/Documents/stuff/am207
+    - /Users/patrickthornton/Documents/stuff/cs161/chickadee-s25-patrickthornton
+    - /Users/patrickthornton/Documents/stuff/cs50/rust50
+    - /Users/patrickthornton/Documents/stuff/check50/problems
+    - /Users/patrickthornton/Documents/stuff/roku/roku-tv
+    - /Users/patrickthornton/Documents/stuff/ap50/ap
+    - /Users/patrickthornton/Documents/stuff/ap50/harvard
+    - /Users/patrickthornton/Documents/stuff/am215/final_9
     - /Users/patrickthornton/Documents/stuff/am215/team_09
+    - /Users/patrickthornton/Documents/stuff/sands/advent
     - /Users/patrickthornton/Documents/stuff/am205
-    - /Users/patrickthornton/Documents/stuff/sands/bwp
     - /Users/patrickthornton/Documents/stuff/am215/class_repo
-    - /Users/patrickthornton/Documents/stuff/am215/sandbox
-    - /Users/patrickthornton/Documents/stuff/cs50/problems
+    - /Users/patrickthornton/Documents/stuff/am207
+    - /Users/patrickthornton/Documents/stuff/sands/sokoban
+    - /Users/patrickthornton/Documents/stuff/check50/labs
+    - /Users/patrickthornton/Documents/stuff/check50/python
+    - /Users/patrickthornton/Documents/stuff/check50/harvard
     - /Users/patrickthornton/Documents/stuff/cs50/check50
+    - /Users/patrickthornton/Documents/stuff/am215/team_09_fork/team_09
+    - /Users/patrickthornton/Documents/stuff/cs50/problems
+    - /Users/patrickthornton/Documents/stuff/sands/bwp
+    - /Users/patrickthornton/Documents/stuff/am215/sandbox
     - /Users/patrickthornton/Documents/stuff/cs50/volume
     - /Users/patrickthornton/Documents/stuff/cs50/cs50.readthedocs.io
     - /../../../../../../Users/patrickthornton/dotfiles
     - /Users/patrickthornton/Documents/stuff/sands/http/codecrafters-sqlite-rust
     - /Users/patrickthornton/Documents/stuff/sands/http/codecrafters-http-server-rust
 startuppopupversion: 5
-lastversion: 0.44.1
+lastversion: 0.45.2
 customcommandshistory: []
 hidecommandlog: false
 ignorewhitespaceindiffview: false

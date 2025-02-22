@@ -128,6 +128,9 @@ alias ua = uv add
 alias ur = uv remove
 alias us = uv sync
 
+alias b2 = /usr/local/bin/brew
+alias readelf = /usr/local/Cellar/binutils/2.44/bin/readelf
+
 alias abcdefghijklmnopqrstuvwxyz = echo "yay!!"
 
 # Nushell Config File

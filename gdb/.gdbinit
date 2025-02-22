@@ -1,3 +1,1 @@
-tui enable
-display asm
-display regs
+source ~/Documents/stuff/sands/gef/gef.py

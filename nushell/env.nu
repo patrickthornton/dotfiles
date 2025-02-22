@@ -105,7 +105,9 @@ $env.EDITOR = "zed"
 # To add entries to PATH (on Windows you might use Path), you can use the following pattern:
 # $env.PATH = ($env.PATH | split row (char esep) | prepend '/some/path')
 $env.PATH = ($env.PATH | split row (char esep) | append '/opt/homebrew/bin')
+$env.PATH = ($env.PATH | split row (char esep) | append '/Applications/Docker.app/Contents/Resources/bin')
 $env.PATH = ($env.PATH | split row (char esep) | append '~/.cargo/bin')
+# $env.PATH = ($env.PATH | split row (char esep) | append '/usr/local/Cellar/binutils/2.44')
 
 # for dyld to find c libraries
 $env.DYLD_LIBRARY_PATH = "/usr/local/lib"

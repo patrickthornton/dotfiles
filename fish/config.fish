@@ -158,6 +158,7 @@ function fgen
     if set -ql _flag_l
         set cmd (string replace --all -- 'fern' 'FERN_NO_VERSION_REDIRECTION=true node ~/fern/fern/packages/cli/cli/dist/prod/cli.cjs' $cmd)
     end
+    echo $cmd
     eval $cmd
 end
 
@@ -169,15 +170,11 @@ function fdef
     if set -ql _flag_l
         set cmd (string replace --all -- 'fern' 'FERN_NO_VERSION_REDIRECTION=true node ~/fern/fern/packages/cli/cli/dist/prod/cli.cjs' $cmd)
     end
+    echo $cmd
     eval $cmd
 end
 
-function javaver
-    set -x -g JAVA_HOME (/usr/libexec/java_home -v $argv[1])
-end
-abbr -a gw './gradlew'
-
-function seedgen
+function sgen
     argparse 'o/output-to-seed' 's/scripts' -- $argv
     or return
 
@@ -188,10 +185,11 @@ function seedgen
     if set -ql _flag_s
         set cmd (string replace --all -- '--skipScripts' '' $cmd)
     end
+    echo $cmd
     eval $cmd
 end
 
-function seedtest
+function stest
     argparse 's/scripts' -- $argv
     or return
 
@@ -199,8 +197,22 @@ function seedtest
     if set -ql _flag_s
         set cmd (string replace --all -- '--skipScripts' '' $cmd)
     end
+    echo $cmd
     eval $cmd
 end
+
+function stestall
+    pnpm seed test --generator $argv[1]-sdk
+end
+
+function gd
+    git diff --no-index $argv[1] $argv[2]
+end
+
+function javaver
+    set -x -g JAVA_HOME (/usr/libexec/java_home -v $argv[1])
+end
+abbr -a gw './gradlew'
 
 abbr -a fbuild 'pnpm install && pnpm fern:build'
 abbr -a sbuild 'pnpm install && pnpm seed:build'

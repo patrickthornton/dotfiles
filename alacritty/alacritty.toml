@@ -1,6 +1,11 @@
 [terminal.shell]
 program = "/opt/homebrew/bin/fish"
 
+[general]
+import = [
+    "~/.config/alacritty/themes/0x96f.toml"
+]
+
 # multiplexer approach
 # [shell]
 # program = "/usr/local/bin/zellij"

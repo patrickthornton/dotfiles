@@ -102,6 +102,7 @@ end
 
 # Python environment abbreviations
 abbr -a p python
+abbr -a py python
 abbr -a ps ~/.venv/bin/python
 abbr -a pip uv pip
 abbr -a pi uv pip install
@@ -148,28 +149,80 @@ starship init fish | source
 
 # fern
 function fgen
-    argparse 'n/no-prev' 'l/local' -- $argv
+    argparse 'f/local-fern' 'd/dev' 'n/no-prev' 'g/local-gen' -- $argv
     or return
 
-    set -l cmd fern generate --group $argv[1]-sdk --preview --log-level debug
-    if set -ql _flag_n
+    set -l ferncmd fern
+    if set -ql _flag_f
+        set ferncmd 'FERN_NO_VERSION_REDIRECTION=true node ~/fern/fern/packages/cli/cli/dist/prod/cli.cjs'
+    end
+    if set -ql _flag_d
+        set ferncmd fern-dev
+    end
+
+    set -l cmd $ferncmd generate --group $argv[1]-sdk --preview --log-level debug
+    if set -ql _flag_n || set -ql _flag_g
         set cmd (string replace --all -- '--preview' '' $cmd)
     end
-    if set -ql _flag_l
-        set cmd (string replace --all -- 'fern' 'FERN_NO_VERSION_REDIRECTION=true node ~/fern/fern/packages/cli/cli/dist/prod/cli.cjs' $cmd)
+    if set -ql _flag_g
+        set cmd $cmd --local
     end
+
     echo $cmd
     eval $cmd
 end
 
 function fdef
-    argparse 'l/local' -- $argv
+    argparse 'f/local-fern' 'd/dev' -- $argv
     or return
 
-    set -l cmd fern write-definition
-    if set -ql _flag_l
-        set cmd (string replace --all -- 'fern' 'FERN_NO_VERSION_REDIRECTION=true node ~/fern/fern/packages/cli/cli/dist/prod/cli.cjs' $cmd)
+    set -l ferncmd fern
+    if set -ql _flag_f
+        set ferncmd 'FERN_NO_VERSION_REDIRECTION=true node ~/fern/fern/packages/cli/cli/dist/prod/cli.cjs'
     end
+    if set -ql _flag_d
+        set ferncmd fern-dev
+    end
+
+    set -l cmd $ferncmd write-definition
+    echo $cmd
+    eval $cmd
+end
+
+function fcheck
+    argparse 'f/local-fern' 'd/dev' 'w/warnings' -- $argv
+    or return
+
+    set -l ferncmd fern
+    if set -ql _flag_f
+        set ferncmd 'FERN_NO_VERSION_REDIRECTION=true node ~/fern/fern/packages/cli/cli/dist/prod/cli.cjs'
+    end
+    if set -ql _flag_d
+        set ferncmd fern-dev
+    end
+
+    set -l cmd $ferncmd check
+    if set -ql _flag_w
+        set cmd $cmd --warnings
+    end
+
+    echo $cmd
+    eval $cmd
+end
+
+function fdocs
+    argparse 'f/local-fern' 'd/dev' -- $argv
+    or return
+
+    set -l ferncmd fern
+    if set -ql _flag_f
+        set ferncmd 'FERN_NO_VERSION_REDIRECTION=true node ~/fern/fern/packages/cli/cli/dist/prod/cli.cjs'
+    end
+    if set -ql _flag_d
+        set ferncmd fern-dev
+    end
+
+    set -l cmd $ferncmd docs dev --log-level debug
     echo $cmd
     eval $cmd
 end
@@ -229,3 +282,11 @@ abbr -a obliterate git clean -fdx
 
 abbr -a frond pnpm frond
 abbr -a shotsnap pnpm test:update --continue=always
+
+abbr -a cbd 'cd .. && cd -'
+
+abbr -a ftoken fern token
+abbr -a ftokenset set -x -g FERN_TOKEN
+abbr -a ftokenclear set -e FERN_TOKEN
+
+abbr -a fir fern ir ir

@@ -43,6 +43,8 @@ abbr -a cl clang
 abbr -a g git
 abbr -a gc gh repo clone
 
+abbr -a f fzf
+
 function gi
     git init
     gh repo create
@@ -119,7 +121,9 @@ abbr -a zp zed-preview
 abbr -a zh zed-preview .
 
 # line counter
-abbr -a tk tokei
+function sc
+    scc --no-cocomo -s complexity
+end
 
 function u
     brew upgrade

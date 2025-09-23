@@ -1,3 +1,9 @@
 git:
   merging:
     args: "--no-ff"
+os:
+  edit:              "zed-preview -- {{filename}}"
+  editAtLine:        "zed-preview -- {{filename}}:{{line}}"
+  editAtLineAndWait: "zed-preview --wait -- {{filename}}:{{line}}"
+  openDirInEditor:   "zed-preview -- {{dir}}"
+  editInTerminal:    false

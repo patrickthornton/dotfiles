@@ -61,7 +61,12 @@ abbr -a ht http
 abbr -a j zellij
 abbr -a jl jless
 abbr -a lg lazygit
-abbr -a m miniserve
+
+abbr -a m pnpm
+abbr -a mi pnpm i
+abbr -a mt pnpm t
+abbr -a mit pnpm it
+abbr -a ms miniserve
 abbr -a mr make run
 
 abbr -a n bun
@@ -144,7 +149,11 @@ abbr -a abcdefghijklmnopqrstuvwxyz echo yay!!
 
 fish_add_path /opt/homebrew/bin
 fish_add_path /usr/local/bin
+fish_add_path ~/.local/bin
 set fish_greeting
+
+set -x -g SHELL /opt/homebrew/bin/fish
+set -x -g EDITOR /opt/homebrew/bin/zed-preview
 
 abbr -a r source ~/.config/fish/config.fish
 
@@ -285,7 +294,8 @@ fish_add_path /Users/Patrick/Library/pnpm
 abbr -a obliterate git clean -fdx
 
 abbr -a frond pnpm frond
-abbr -a shotsnap pnpm test:update --continue=always
+abbr -a ctestall pnpm test:update --continue=always
+abbr -a ctest pnpm test:update --continue=always --filter @fern-api/openapi-ir-to-fern-tests
 
 abbr -a cbd 'cd .. && cd -'
 

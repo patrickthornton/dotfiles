@@ -183,12 +183,23 @@ keybinds {
     }
 }
 
+// Plugin aliases - can be used to change the implementation of Zellij
+// changing these requires a restart to take effect
 plugins {
-    tab-bar { path "tab-bar"; }
-    status-bar { path "status-bar"; }
-    strider { path "strider"; }
-    compact-bar { path "compact-bar"; }
-    session-manager { path "session-manager"; }
+    tab-bar location="zellij:tab-bar"
+    status-bar location="zellij:status-bar"
+    strider location="zellij:strider"
+    compact-bar location="zellij:compact-bar"
+    session-manager location="zellij:session-manager"
+    welcome-screen location="zellij:session-manager" {
+        welcome_screen true
+    }
+    filepicker location="zellij:strider" {
+        cwd "/"
+    }
+    configuration location="zellij:configuration"
+    plugin-manager location="zellij:plugin-manager"
+    about location="zellij:about"
 }
 
 // Choose what to do when zellij receives SIGTERM, SIGINT, SIGQUIT or SIGHUP
@@ -209,7 +220,7 @@ plugins {
 // Choose the path to the default shell that zellij will use for opening new panes
 // Default: $SHELL
 //
-default_shell "nu"
+// default_shell "fish"
 
 // Choose the path to override cwd that zellij will use for opening new panes
 //
@@ -220,7 +231,13 @@ default_shell "nu"
 //   - true (default)
 //   - false
 //
-pane_frames false
+pane_frames true
+ui {
+    pane_frames {
+        rounded_corners true
+        hide_session_name true
+    }
+}
 
 // Toggle between having Zellij lay out panes according to a predefined set of layouts whenever possible
 // Options:
@@ -268,15 +285,31 @@ pane_frames false
 //     }
 // }
 
+themes {
+    custom {
+        fg "#fcfcfa"
+        bg "#262427"
+        black "#262427"
+        red "#ff7272"
+        green "#bcdf59"
+        yellow "#ffca58"
+        orange "#ffca58"
+        blue "#49cae4"
+        magenta "#a093e2"
+        cyan "#aee8f4"
+        white "#fcfcfa"
+    }
+}
+
 // Choose the theme that is specified in the themes section.
 // Default: default
 //
-theme "catppuccin-mocha"
+theme "custom"
 
 // The name of the default layout to load on startup
 // Default: "default"
 //
-default_layout "triple"
+// default_layout "triple"
 
 // Choose the mode that zellij uses when starting up.
 // Default: normal
@@ -349,3 +382,5 @@ default_layout "triple"
 // Default: true
 //
 // styled_underlines false
+
+show_startup_tips false

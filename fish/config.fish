@@ -8,7 +8,7 @@ end
 
 # file listing
 abbr -a l eza -1 -l -a --no-user --no-permissions --icons=always
-abbr -a lg eza -G -l -a --total-size --no-user --no-permissions --icons=always
+abbr -a ll eza -1 -l -a --total-size --no-user --no-permissions --icons=always
 abbr -a lt eza -T -l -a --total-size --no-user --no-permissions --icons=always
 
 # brew
@@ -66,10 +66,12 @@ abbr -a m pnpm
 abbr -a mi pnpm i
 abbr -a mt pnpm t
 abbr -a mit pnpm it
+abbr -a mu pnpm test:update
+abbr -a mb pnpm build
 abbr -a ms miniserve
 abbr -a mr make run
 
-abbr -a n bun
+abbr -a nn bun
 abbr -a na bun add
 abbr -a nc bun create
 abbr -a ncs bun create svelte@latest
@@ -77,6 +79,7 @@ abbr -a ni bun install
 abbr -a nv bun remove
 abbr -a nr bun --bun run dev
 abbr -a nb bun --bun run build
+abbr -a nn bun run
 
 abbr -a nf neofetch
 
@@ -111,7 +114,6 @@ end
 abbr -a p python
 abbr -a py python
 abbr -a ps ~/.venv/bin/python
-abbr -a pip uv pip
 abbr -a pi uv pip install
 abbr -a pe uv pip install -e .
 abbr -a pu uv pip uninstall
@@ -136,8 +138,11 @@ end
 
 abbr -a ui uv init
 abbr -a ua uv add
-abbr -a ur uv remove
+abbr -a ur uv run
 abbr -a us uv sync
+abbr -a um uv run mypy .
+abbr -a up uv run pytest -rP .
+abbr -a ut 'uv run mypy . && uv run pytest -rP .'
 
 abbr -a y yarn
 abbr -a yt yarn test
@@ -148,12 +153,15 @@ abbr -a b2 /usr/local/bin/brew
 abbr -a abcdefghijklmnopqrstuvwxyz echo yay!!
 
 fish_add_path /opt/homebrew/bin
+fish_add_path /opt/homebrew/sbin
 fish_add_path /usr/local/bin
 fish_add_path ~/.local/bin
+fish_add_path /Users/Patrick/.bun/bin
 set fish_greeting
 
 set -x -g SHELL /opt/homebrew/bin/fish
 set -x -g EDITOR /opt/homebrew/bin/zed-preview
+set -x -g N_PREFIX ~/.n
 
 abbr -a r source ~/.config/fish/config.fish
 
@@ -240,35 +248,120 @@ function fdocs
     eval $cmd
 end
 
-function sgen
-    argparse 'o/output-to-seed' 's/scripts' -- $argv
+function fir
+    argparse 'f/local-fern' 'd/dev' -- $argv
     or return
 
-    set -l cmd pnpm seed run --generator $argv[1]-sdk --path ~/sdks/$argv[2]-fern-config/fern --log-level debug --skipScripts
+    set -l ferncmd fern
+    if set -ql _flag_f
+        set ferncmd 'FERN_NO_VERSION_REDIRECTION=true node ~/fern/fern/packages/cli/cli/dist/prod/cli.cjs'
+    end
+    if set -ql _flag_d
+        set ferncmd fern-dev
+    end
+
+    set -l cmd $ferncmd ir ir --log-level debug
+    echo $cmd
+    eval $cmd
+end
+
+function fir
+    argparse 'f/local-fern' 'd/dev' -- $argv
+    or return
+
+    set -l ferncmd fern
+    if set -ql _flag_f
+        set ferncmd 'FERN_NO_VERSION_REDIRECTION=true node ~/fern/fern/packages/cli/cli/dist/prod/cli.cjs'
+    end
+    if set -ql _flag_d
+        set ferncmd fern-dev
+    end
+
+    set -l cmd $ferncmd ir ir --log-level debug
+    echo $cmd
+    eval $cmd
+end
+
+function fopen
+    argparse 'f/local-fern' 'd/dev' -- $argv
+    or return
+
+    set -l ferncmd fern
+    if set -ql _flag_f
+        set ferncmd 'FERN_NO_VERSION_REDIRECTION=true node ~/fern/fern/packages/cli/cli/dist/prod/cli.cjs'
+    end
+    if set -ql _flag_d
+        set ferncmd fern-dev
+    end
+
+    set -l cmd $ferncmd openapi-ir openapi-ir --log-level debug
+    echo $cmd
+    eval $cmd
+end
+
+function fdir
+    argparse 'f/local-fern' 'd/dev' -- $argv
+    or return
+
+    set -l ferncmd fern
+    if set -ql _flag_f
+        set ferncmd 'FERN_NO_VERSION_REDIRECTION=true node ~/fern/fern/packages/cli/cli/dist/prod/cli.cjs'
+    end
+    if set -ql _flag_d
+        set ferncmd fern-dev
+    end
+
+    set -l cmd $ferncmd dynamic-ir --language $argv[1] --log-level debug ir.json
+    echo $cmd
+    eval $cmd
+end
+
+function sgen
+    argparse 'o/output-to-seed' 's/scripts' 'l/local' -- $argv
+    or return
+
+    set -l cmd pnpm seed run --generator $argv[1]-sdk --path ~/configs/$argv[2]-fern-config/fern --log-level debug --skipScripts
     if set -ql _flag_o
         set cmd $cmd --output-path ~/.seed/$argv[2]-$argv[1]
     end
     if set -ql _flag_s
         set cmd (string replace --all -- '--skipScripts' '' $cmd)
     end
+    if set -ql _flag_l
+        set cmd $cmd --local
+    end
+
     echo $cmd
     eval $cmd
 end
 
 function stest
-    argparse 's/scripts' -- $argv
+    argparse 's/scripts' 'l/local' -- $argv
     or return
 
     set -l cmd pnpm seed test --generator $argv[1]-sdk --fixture $argv[2] --outputFolder $argv[3] --log-level debug --skipScripts
     if set -ql _flag_s
         set cmd (string replace --all -- '--skipScripts' '' $cmd)
     end
+    if set -ql _flag_l
+        set cmd $cmd --local
+    end
+
     echo $cmd
     eval $cmd
 end
 
 function stestall
-    pnpm seed test --generator $argv[1]-sdk
+    argparse 'l/local' -- $argv
+    or return
+
+    set -l cmd pnpm seed test --generator $argv[1]-sdk
+    if set -ql _flag_l
+        set cmd $cmd --local
+    end
+
+    echo $cmd
+    eval $cmd
 end
 
 function gd
@@ -290,6 +383,7 @@ abbr -a ghs gh auth switch
 set -x -g PNPM_HOME /Users/Patrick/Library/pnpm
 
 fish_add_path /Users/Patrick/Library/pnpm
+fish_add_path /Users/Patrick/.n/bin
 
 abbr -a obliterate git clean -fdx
 
@@ -303,4 +397,14 @@ abbr -a ftoken fern token
 abbr -a ftokenset set -x -g FERN_TOKEN
 abbr -a ftokenclear set -e FERN_TOKEN
 
-abbr -a fir fern ir ir
+function hf-cache-test
+    set -l cmd hyperfine --warmup 1 --runs 5 --export-markdown benchmark.md -u second -i
+    set cmd $cmd \"fern wrong-command-entirely\"
+    # set cmd $cmd \"FERN_NO_VERSION_REDIRECTION=true node ~/fern/fern/packages/cli/cli/dist/prod/cli.cjs wrong-command-entirely\"
+    set cmd $cmd \"node ~/fern/fern/packages/cli/cli/dist/prod/cli.cjs wrong-command-entirely\"
+
+    echo $cmd
+    eval $cmd
+end
+
+abbr -a fu 'fern upgrade && fern generator upgrade --include-major'

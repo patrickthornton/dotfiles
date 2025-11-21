@@ -1,28 +1,41 @@
 lastupdatecheck: 0
 recentrepos:
     - /Users/Patrick/dotfiles
+    - /Users/Patrick/sdks/auth0-java-sdk
+    - /Users/Patrick/configs/auth0-fern-config
     - /Users/Patrick/fern/fern
-    - /Users/Patrick/sdks/auth0-fern-config
-    - /Users/Patrick/sdks/samsara-fern-config
+    - /Users/Patrick/sdks/forks/node-auth0
+    - /Users/Patrick/configs/pipedream-fern-config
+    - /Users/Patrick/nonce-configs/auth0-sdk-config/fern/.preview/fern-typescript-sdk
+    - /Users/Patrick/configs/auth0-myaccount-fern-config
+    - /Users/Patrick/configs/samsara-fern-config
+    - /Users/Patrick/configs/proto-fern-config
+    - /Users/Patrick/sdks/deepgram-docs
+    - /Users/Patrick/snippets/auth0-myorg-snippets
+    - /Users/Patrick/snippets/auth0-myaccount-snippets
+    - /Users/Patrick/snippets/auth0-management-snippets
+    - /Users/Patrick/configs/auth0-myorg-fern-config
+    - /Users/Patrick/configs/deepgram-fern-config
+    - /Users/Patrick/configs/schematic-fern-config
+    - /Users/Patrick/sdks/node-auth0
+    - /Users/Patrick/sdks/auth0-node-sdk
+    - /Users/Patrick/sands/test/patrick-python-sdk
+    - /Users/Patrick/fern/frond
+    - /Users/Patrick/sands/test/patrick-node-sdk
+    - /Users/Patrick/fern/dummy-configs
+    - /Users/Patrick/fern/fiddle
+    - /Users/Patrick/sdks/athena-python
+    - /Users/Patrick/sdks/auth0-go-sdk
+    - /Users/Patrick/snippets/merge-snippets
+    - /Users/Patrick/fern/fern-platform
+    - /Users/Patrick/sdks/auth0-python-sdk
     - /Users/Patrick/sands/sokoban
     - /Users/Patrick/sands/rust50
-    - /Users/Patrick/sdks/auth0-go-sdk
-    - /Users/Patrick/sdks/fluidstack-fern-config
-    - /Users/Patrick/sdks/forks/go-auth0
-    - /Users/Patrick/fern/fiddle
-    - /Users/Patrick/sdks/mercoa-fern-config
     - /Users/Patrick/sdks/deepgram-python-core
-    - /Users/Patrick/sdks/pinnacle-fern-config
-    - /Users/Patrick/sdks/deepgram-docs
-    - /Users/Patrick/sdks/proto-fern-config
-    - /Users/Patrick/sdks/auth0-node-sdk
-    - /Users/Patrick/sdks/forks/node-auth0
-    - /Users/Patrick/fern/frond
-    - /Users/Patrick/fern/fern-platform
     - /Users/Patrick/fern/docs
     - /Users/Patrick/fern/venus
 startuppopupversion: 5
 didshowhunkstaginghint: true
-lastversion: 0.55.1
+lastversion: 0.56.0
 customcommandshistory: []
 hidecommandlog: false

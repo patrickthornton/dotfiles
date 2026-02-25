@@ -193,6 +193,30 @@ function fgen
     eval $cmd
 end
 
+function fge
+    argparse 'f/local-fern' 'd/dev' 'n/no-prev' 'g/local-gen' -- $argv
+    or return
+
+    set -l ferncmd fern
+    if set -ql _flag_f
+        set ferncmd 'FERN_NO_VERSION_REDIRECTION=true node ~/fern/fern/packages/cli/cli/dist/prod/cli.cjs'
+    end
+    if set -ql _flag_d
+        set ferncmd fern-dev
+    end
+
+    set -l cmd $ferncmd generate --group $argv[1] --preview --log-level debug
+    if set -ql _flag_n || set -ql _flag_g
+        set cmd (string replace --all -- '--preview' '' $cmd)
+    end
+    if set -ql _flag_g
+        set cmd $cmd --local
+    end
+
+    echo $cmd
+    eval $cmd
+end
+
 function fdef
     argparse 'f/local-fern' 'd/dev' -- $argv
     or return
@@ -335,6 +359,44 @@ function sgen
     eval $cmd
 end
 
+function sge
+    argparse 'o/output-to-seed' 's/scripts' 'l/local' -- $argv
+    or return
+
+    set -l cmd pnpm seed run --generator $argv[1] --path ~/configs/$argv[2]-fern-config/fern --log-level debug --skipScripts
+    if set -ql _flag_o
+        set cmd $cmd --output-path ~/.seed/$argv[2]-$argv[1]
+    end
+    if set -ql _flag_s
+        set cmd (string replace --all -- '--skipScripts' '' $cmd)
+    end
+    if set -ql _flag_l
+        set cmd $cmd --local
+    end
+
+    echo $cmd
+    eval $cmd
+end
+
+function sgennonce
+    argparse 'o/output-to-seed' 's/scripts' 'l/local' -- $argv
+    or return
+
+    set -l cmd pnpm seed run --generator $argv[1]-sdk --path ~/nonce-configs/$argv[2]-fern-config/fern --log-level debug --skipScripts
+    if set -ql _flag_o
+        set cmd $cmd --output-path ~/.seed/$argv[2]-$argv[1]
+    end
+    if set -ql _flag_s
+        set cmd (string replace --all -- '--skipScripts' '' $cmd)
+    end
+    if set -ql _flag_l
+        set cmd $cmd --local
+    end
+
+    echo $cmd
+    eval $cmd
+end
+
 function stest
     argparse 's/scripts' 'l/local' -- $argv
     or return
@@ -381,6 +443,7 @@ abbr -a lfern FERN_NO_VERSION_REDIRECTION=true node ~/fern/fern/packages/cli/cli
 abbr -a ghs gh auth switch
 
 set -x -g PNPM_HOME /Users/Patrick/Library/pnpm
+set -x -g DOTNET_ROOT /usr/local/share/dotnet
 
 fish_add_path /Users/Patrick/Library/pnpm
 fish_add_path /Users/Patrick/.n/bin
@@ -408,3 +471,87 @@ function hf-cache-test
 end
 
 abbr -a fu 'fern upgrade && fern generator upgrade --include-major'
+
+function gou
+    set -l PROJECT_NAME "wiremock-"(basename (dirname (pwd)) | tr -d ".")
+    if test -f wiremock/docker-compose.test.yml
+        docker compose -p $PROJECT_NAME -f wiremock/docker-compose.test.yml down
+        docker compose -p $PROJECT_NAME -f wiremock/docker-compose.test.yml up -d
+        set -gx WIREMOCK_PORT (docker compose -p $PROJECT_NAME -f wiremock/docker-compose.test.yml port wiremock 8080 | cut -d: -f2)
+        echo "WIREMOCK_PORT=$WIREMOCK_PORT"
+    end
+end
+
+function god
+    set -l PROJECT_NAME "wiremock-"(basename (dirname (pwd)) | tr -d ".")
+    docker compose -p $PROJECT_NAME -f wiremock/docker-compose.test.yml down
+end
+
+function got
+    go test ./...
+end
+
+function testp
+    echo "=========== poetry env use 3.13 =========="
+    poetry env use 3.13
+    echo
+    echo "=========== poetry install =========="
+    poetry install
+    echo
+    echo "=========== poetry run mypy . =========="
+    poetry run mypy .
+    echo
+    echo "=========== poetry run pytest -rP . =========="
+    poetry run pytest -rP .
+end
+
+function testc
+    echo "=========== dotnet test =========="
+    dotnet test
+end
+
+function testj
+    echo "=========== ./gradlew clean =========="
+    ./gradlew clean
+    echo
+    echo "=========== ./gradlew spotlessCheck =========="
+    ./gradlew spotlessCheck
+    echo
+    echo "=========== ./gradlew build =========="
+    ./gradlew build
+end
+
+function testh
+    echo "=========== composer install =========="
+    composer install
+    echo
+    echo "=========== composer build =========="
+    composer build
+    echo
+    echo "=========== composer test =========="
+    composer test
+end
+
+function testr
+    echo "=========== bundle install =========="
+    bundle install
+    echo
+
+    echo "=========== bundle exec rubocop =========="
+    bundle exec rubocop
+    echo
+
+    echo "=========== docker compose -f wiremock/docker-compose.test.yml up -d --wait =========="
+    docker compose -f wiremock/docker-compose.test.yml up -d --wait
+    echo
+
+    echo "=========== RUN_WIRE_TESTS=true bundle exec rake test =========="
+    RUN_WIRE_TESTS=true bundle exec rake test
+    echo
+
+    echo "=========== docker compose -f wiremock/docker-compose.test.yml down =========="
+    docker compose -f wiremock/docker-compose.test.yml down
+end
+
+# Added by `rbenv init` on Fri Feb 13 11:29:54 EST 2026
+status --is-interactive; and rbenv init - --no-rehash fish | source

@@ -7,3 +7,4 @@ os:
   editAtLineAndWait: "zed-preview --wait -- {{filename}}:{{line}}"
   openDirInEditor:   "zed-preview -- {{dir}}"
   editInTerminal:    false
+promptToReturnFromSubprocess: false

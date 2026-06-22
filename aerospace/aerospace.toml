@@ -1,0 +1,95 @@
+# AeroSpace config
+# Monitor 1 (laptop): pageable fullscreen Slack + Firefox
+# Monitor 2 (external): 2x2 Alacritty grid
+
+after-login-command = []
+after-startup-command = [
+  'exec-and-forget borders active_color=0xffe1e3e4 inactive_color=0xff494d64 width=5.0'
+]
+start-at-login = false
+
+enable-normalization-flatten-containers = true
+enable-normalization-opposite-orientation-for-nested-containers = true
+
+accordion-padding = 12
+default-root-container-layout = 'tiles'
+default-root-container-orientation = 'auto'
+
+[gaps]
+inner.horizontal = 8
+inner.vertical = 8
+outer.left = 8
+outer.right = 8
+outer.top = 8
+outer.bottom = 8
+
+# Bind workspaces to monitors
+[workspace-to-monitor-force-assignment]
+S = 'main'        # Slack → laptop display
+F = 'main'        # Firefox → laptop display
+L = 'main'        # Linear -> laptop display
+T = 'secondary'   # Terminals → external monitor
+E = 'secondary'   # Editors → external monitor
+
+# Auto-assign apps to workspaces
+[[on-window-detected]]
+if.app-id = 'com.tinyspeck.slackmacgap'
+run = 'move-node-to-workspace S'
+
+[[on-window-detected]]
+if.app-id = 'org.mozilla.firefox'
+run = 'move-node-to-workspace F'
+
+[[on-window-detected]]
+if.app-id = 'org.alacritty'
+run = 'move-node-to-workspace T'
+
+[[on-window-detected]]
+if.app-id = 'dev.zed.Zed-Preview'
+run = 'move-node-to-workspace E'
+
+[[on-window-detected]]
+if.app-id = 'com.linear'
+run = 'move-node-to-workspace L'
+
+# Key bindings
+[mode.main.binding]
+ctrl-slash = 'layout tiles horizontal vertical'
+ctrl-comma = 'layout accordion horizontal vertical'
+
+ctrl-h = 'focus left'
+ctrl-j = 'focus down'
+ctrl-k = 'focus up'
+ctrl-l = 'focus right'
+
+ctrl-shift-h = 'move left'
+ctrl-shift-j = 'move down'
+ctrl-shift-k = 'move up'
+ctrl-shift-l = 'move right'
+
+ctrl-shift-minus = 'resize smart -50'
+ctrl-shift-equal = 'resize smart +50'
+
+ctrl-s = 'workspace S'
+ctrl-f = 'workspace F'
+ctrl-w = 'workspace T'
+ctrl-e = 'workspace E'
+ctrl-a = 'workspace L'
+
+ctrl-x = 'close'
+
+ctrl-shift-s = 'move-node-to-workspace S'
+ctrl-shift-f = 'move-node-to-workspace F'
+ctrl-shift-t = 'move-node-to-workspace T'
+
+alt-shift-semicolon = 'mode service'
+
+[mode.service.binding]
+esc = ['reload-config', 'mode main']
+r = ['flatten-workspace-tree', 'mode main']
+f = ['layout floating tiling', 'mode main']
+backspace = ['close-all-windows-but-current', 'mode main']
+alt-shift-h = ['join-with left', 'mode main']
+alt-shift-j = ['join-with down', 'mode main']
+alt-shift-k = ['join-with up', 'mode main']
+alt-shift-l = ['join-with right', 'mode main']

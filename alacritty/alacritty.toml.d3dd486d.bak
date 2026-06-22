@@ -21,20 +21,11 @@ size = 13.0
 family = "MesloLGS Nerd Font Mono"
 
 [window]
-startup_mode = "Windowed"
+startup_mode = "Fullscreen"
 decorations = "None"
 option_as_alt = "Both"
-opacity = 1.0
 
 [mouse]
 hide_when_typing = true
 
 [terminal]
-
-[[keyboard.bindings]]
-key = "Return"
-mods = "Shift"
-chars = "\u001B\r"
-
-[selection]
-save_to_clipboard = true

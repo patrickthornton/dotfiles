@@ -1,41 +1,84 @@
 lastupdatecheck: 0
 recentrepos:
     - /Users/Patrick/dotfiles
+    - /Users/Patrick/configs/plantstore-demo-fern-config
     - /Users/Patrick/fern/fern
+    - /Users/Patrick/fern/fern-go
+    - /Users/Patrick/fern/cli-sdk
+    - /Users/Patrick/configs/brevo-fern-config
+    - /Users/Patrick/fern/fern-php
+    - /Users/Patrick/fern/fern2
+    - /Users/Patrick/fern/fern-csharp-2
+    - /Users/Patrick/fern/fern-rust
+    - /Users/Patrick/fern/cli-sdk-3
+    - /Users/Patrick/snippets/twilio-core-snippets
+    - /Users/Patrick/fern/fern-csharp
+    - /Users/Patrick/fern/fern-typescript
+    - /Users/Patrick/fern/fern-cg
+    - /Users/Patrick/fern/cli-sdk-2
+    - /Users/Patrick/configs/auth0-fern-config
+    - /Users/Patrick/fern/fern-python
+    - /Users/Patrick/fern/fern-ruby
+    - /Users/Patrick/fern/fern-cli-1
+    - /Users/Patrick/fern/fern-cli-2
+    - /Users/Patrick/fern/fiddle
+    - /Users/Patrick/configs/elevenlabs-fern-config
+    - /Users/Patrick/fern/marketing-site
+    - /Users/Patrick/configs/google-fern-config
+    - /Users/Patrick/fern/fern-java
     - /Users/Patrick/configs/deepgram-fern-config
+    - /Users/Patrick/fern/fern-java-2
+    - /Users/Patrick/fern/fern-python-2
+    - /Users/Patrick/sdks/auth0-python
+    - /Users/Patrick/snippets/auth0-myorg-snippets
+    - /Users/Patrick/sdks/forks/networkscan
+    - /Users/Patrick/configs/method-fern-config
+    - /Users/Patrick/configs/vectara-fern-config
+    - /Users/Patrick/sdks/auth0-ruby-sdk
+    - /Users/Patrick/fern/fern-openapi
+    - /Users/Patrick/configs/candid-fern-config
+    - /Users/Patrick/snippets/auth0-management-snippets
+    - /Users/Patrick/snippets/auth0-myaccount-snippets
+    - /Users/Patrick/fern/fern-swift
+    - /Users/Patrick/fern/fern-java-3
+    - /Users/Patrick/configs/auth0-myorg-fern-config
     - /Users/Patrick/sdks/forks/auth0-java
     - /Users/Patrick/sdks/auth0-java
-    - /Users/Patrick/configs/agentmail-fern-config
-    - /Users/Patrick/configs/auth0-fern-config
+    - /Users/Patrick/sdks/deepgram-rust-sdk
+    - /Users/Patrick/sdks/auth0-myorg-java-sdk
+    - /Users/Patrick/sdks/auth0.net
     - /Users/Patrick/sdks/management.net
-    - /Users/Patrick/sdks/auth0-ruby-sdk
-    - /Users/Patrick/configs/auth0-myorg-fern-config
-    - /Users/Patrick/snippets/twilio-core-snippets
+    - /Users/Patrick/nonce-configs/payabli-fern-config/fern/apis/payabliApi/.preview/fern-go-sdk
+    - /Users/Patrick/fern/fern-platform
+    - /Users/Patrick/sdks/go-auth0
+    - /Users/Patrick/sdks/forks/go-auth0
+    - /Users/Patrick/configs/vapi-fern-config/fern/apis/api/.preview/fern-python-sdk
+    - /Users/Patrick/configs/phenoml-fern-config
+    - /Users/Patrick/configs/samsara-fern-config
+    - /Users/Patrick/configs/proto-fern-config
+    - /Users/Patrick/configs/fynapse-fern-config
+    - /Users/Patrick/sdks/auth0-myorg-python-sdk
+    - /Users/Patrick/configs/kard-fern-config
+    - /Users/Patrick/fern/tools
+    - /Users/Patrick/fern/docs
+    - /Users/Patrick/configs/agentmail-fern-config
     - /Users/Patrick/sdks/auth0-php-sdk
     - /Users/Patrick/sdks/forks/samsara-java
     - /Users/Patrick/sdks/samsara-java
-    - /Users/Patrick/configs/samsara-fern-config
     - /Users/Patrick/configs/thera-fern-config
     - /Users/Patrick/snippets/snippets-starter
-    - /Users/Patrick/snippets/auth0-management-snippets
-    - /Users/Patrick/configs/proto-fern-config
     - /Users/Patrick/sdks/auth0-php
     - /Users/Patrick/configs/square-fern-config
     - /Users/Patrick/fern/sync-openapi
     - /Users/Patrick/fern/dummy-configs
     - /Users/Patrick/configs/fluidstack-fern-config
-    - /Users/Patrick/fern/fiddle
     - /Users/Patrick/configs/fathomx-fern-config
     - /Users/Patrick/sdks/auth0-python-sdk
     - /Users/Patrick/sdks/auth0-java-sdk
-    - /Users/Patrick/fern/docs
     - /Users/Patrick/sdks/node-auth0
-    - /Users/Patrick/sdks/forks/go-auth0
     - /Users/Patrick/sdks/forks/node-auth0
     - /Users/Patrick/sdks/samsara-dotnet
     - /Users/Patrick/fern/frond
-    - /Users/Patrick/snippets/auth0-myorg-snippets
-    - /Users/Patrick/snippets/auth0-myaccount-snippets
     - /Users/Patrick/configs/pipedream-fern-config
     - /Users/Patrick/configs/auth0-myaccount-fern-config
     - /Users/Patrick/configs/schematic-fern-config
@@ -44,13 +87,835 @@ recentrepos:
     - /Users/Patrick/sands/test/patrick-node-sdk
     - /Users/Patrick/sdks/athena-python
     - /Users/Patrick/snippets/merge-snippets
-    - /Users/Patrick/fern/fern-platform
     - /Users/Patrick/sands/sokoban
     - /Users/Patrick/sands/rust50
     - /Users/Patrick/sdks/deepgram-python-core
     - /Users/Patrick/fern/venus
 startuppopupversion: 5
 didshowhunkstaginghint: true
-lastversion: 0.59.0
+lastversion: 0.62.2
 customcommandshistory: []
 hidecommandlog: false
+githubPullRequests:
+    /Users/Patrick/configs/auth0-fern-config:
+        - headRefName: fern-check-resolution
+          number: 18
+          title: potential fern check resolution
+          state: OPEN
+          url: https://github.com/fern-demo/auth0-fern-config/pull/18
+          headRepositoryOwner: fern-demo
+        - headRefName: potential-overrides
+          number: 19
+          title: potential java overrides
+          state: OPEN
+          url: https://github.com/fern-demo/auth0-fern-config/pull/19
+          headRepositoryOwner: fern-demo
+        - headRefName: added-step-attributes
+          number: 15
+          title: example of adding step attributes
+          state: OPEN
+          url: https://github.com/fern-demo/auth0-fern-config/pull/15
+          headRepositoryOwner: fern-demo
+        - headRefName: client-clients-distinction
+          number: 14
+          title: example of how to differentiate `client` and `clients`
+          state: OPEN
+          url: https://github.com/fern-demo/auth0-fern-config/pull/14
+          headRepositoryOwner: fern-demo
+        - headRefName: namespacing-overrides
+          number: 12
+          title: unify create/update scimconfigurationrequestcontent
+          state: OPEN
+          url: https://github.com/fern-demo/auth0-fern-config/pull/12
+          headRepositoryOwner: fern-demo
+    /Users/Patrick/configs/brevo-fern-config: []
+    /Users/Patrick/configs/deepgram-fern-config:
+        - headRefName: lo/v5-5-regen
+          number: 651
+          title: 'chore: update stuff for sdk gen'
+          state: CLOSED
+          url: https://github.com/deepgram/deepgram-docs/pull/651
+          headRepositoryOwner: deepgram
+    /Users/Patrick/configs/elevenlabs-fern-config:
+        - headRefName: main
+          number: 1456
+          title: fix webhook request handler example
+          state: MERGED
+          url: https://github.com/elevenlabs/elevenlabs-dx/pull/1456
+          headRepositoryOwner: yonathan06
+        - headRefName: main
+          number: 1437
+          title: Build tropical food media platform (#1)
+          state: CLOSED
+          url: https://github.com/elevenlabs/elevenlabs-dx/pull/1437
+          headRepositoryOwner: ilsajjh
+        - headRefName: main
+          number: 1283
+          title: added import os to the quickstart guide
+          state: MERGED
+          url: https://github.com/elevenlabs/elevenlabs-dx/pull/1283
+          headRepositoryOwner: minettekaum
+        - headRefName: main
+          number: 1268
+          title: Update voice-design.mdx
+          state: MERGED
+          url: https://github.com/elevenlabs/elevenlabs-dx/pull/1268
+          headRepositoryOwner: elevenlabsmark
+        - headRefName: main
+          number: 1170
+          title: Small correction for portaudio installation on Debian-based Linux
+          state: MERGED
+          url: https://github.com/elevenlabs/elevenlabs-dx/pull/1170
+          headRepositoryOwner: AstraBert
+    /Users/Patrick/configs/google-fern-config: []
+    /Users/Patrick/configs/method-fern-config: []
+    /Users/Patrick/configs/plantstore-demo-fern-config: []
+    /Users/Patrick/configs/vectara-fern-config:
+        - headRefName: auth-config
+          number: 565
+          title: auth config fix
+          state: OPEN
+          url: https://github.com/vectara/docs/pull/565
+          headRepositoryOwner: vectara
+        - headRefName: main
+          number: 379
+          title: 'docs(update): Update HHEM documentation for HHME-2.2'
+          state: MERGED
+          url: https://github.com/vectara/docs/pull/379
+          headRepositoryOwner: forrestbao
+        - headRefName: main
+          number: 326
+          title: Add request timeouts in docs
+          state: MERGED
+          url: https://github.com/vectara/docs/pull/326
+          headRepositoryOwner: eskibars
+        - headRefName: main
+          number: 176
+          title: Add update filter attributes and list jobs to the OpenAPI spec
+          state: MERGED
+          url: https://github.com/vectara/docs/pull/176
+          headRepositoryOwner: eskibars
+        - headRefName: main
+          number: 65
+          title: Update OAS for latest public protos
+          state: MERGED
+          url: https://github.com/vectara/docs/pull/65
+          headRepositoryOwner: eskibars
+        - headRefName: main
+          number: 64
+          title: Add core services to the APIs
+          state: MERGED
+          url: https://github.com/vectara/docs/pull/64
+          headRepositoryOwner: eskibars
+    /Users/Patrick/dotfiles: []
+    /Users/Patrick/fern/cli-sdk: []
+    /Users/Patrick/fern/cli-sdk-2:
+        - headRefName: patrick/openapi/composition-lowering
+          number: 124
+          title: 'feat(openapi): lower allOf and nullable-union composition into flag surface'
+          state: OPEN
+          url: https://github.com/fern-api/cli-sdk/pull/124
+          headRepositoryOwner: fern-api
+    /Users/Patrick/fern/cli-sdk-3:
+        - headRefName: patrick/openapi/response-schemas-in-json-help
+          number: 159
+          title: 'feat(FER-10873): surface response schemas in --help --format json'
+          state: OPEN
+          url: https://github.com/fern-api/cli-sdk/pull/159
+          headRepositoryOwner: fern-api
+        - headRefName: patrick/cli/introspect-subcommand
+          number: 169
+          title: 'feat(cli): --schema global flag for machine-readable surface'
+          state: MERGED
+          url: https://github.com/fern-api/cli-sdk/pull/169
+          headRepositoryOwner: fern-api
+    /Users/Patrick/fern/fern:
+        - headRefName: main
+          number: 16114
+          title: Add Datadog Synthetic tests workflow
+          state: OPEN
+          url: https://github.com/fern-api/fern/pull/16114
+          headRepositoryOwner: adriandorcz5-sys
+        - headRefName: main
+          number: 12960
+          title: 'feat(rust): Added unit test infra to generated rust sdk'
+          state: CLOSED
+          url: https://github.com/fern-api/fern/pull/12960
+          headRepositoryOwner: HoaX7
+        - headRefName: main
+          number: 6886
+          title: 'chore: use issue labeler action'
+          state: CLOSED
+          url: https://github.com/fern-api/fern/pull/6886
+          headRepositoryOwner: Prachi-Jamdade
+        - headRefName: main
+          number: 6145
+          title: 'chore(docs): npm automation token screenshot'
+          state: MERGED
+          url: https://github.com/fern-api/fern/pull/6145
+          headRepositoryOwner: Haakam21
+        - headRefName: main
+          number: 5466
+          title: 'fix(openapi): converts float type to the appropriate OpenAPI 3 type'
+          state: MERGED
+          url: https://github.com/fern-api/fern/pull/5466
+          headRepositoryOwner: JacobNWolf
+        - headRefName: patrick/ci/pin-gha-workflows-to-shas
+          number: 15796
+          title: 'chore(ci): pin GitHub Actions to immutable SHAs and add lockdown checks'
+          state: CLOSED
+          url: https://github.com/fern-api/fern/pull/15796
+          headRepositoryOwner: fern-api
+        - headRefName: patrick/empty
+          number: 12810
+          title: 'chore(internal): deliberately empty PR for testing'
+          state: CLOSED
+          url: https://github.com/fern-api/fern/pull/12810
+          headRepositoryOwner: fern-api
+        - headRefName: patrick/cli/version-cache
+          number: 10072
+          title: 'feat(cli): maintain a cache of downloaded CLI versions'
+          state: CLOSED
+          url: https://github.com/fern-api/fern/pull/10072
+          headRepositoryOwner: fern-api
+        - headRefName: patrick/go/dedupe-union-base-properties
+          number: 16554
+          title: 'feat(go): add dedupeUnionBaseProperties flag for discriminated unions'
+          state: MERGED
+          url: https://github.com/fern-api/fern/pull/16554
+          headRepositoryOwner: fern-api
+        - headRefName: patrick/parser/cull-primitive-example-culling
+          number: 11548
+          title: 'fix(internal): remove culling of primitive examples in parser'
+          state: CLOSED
+          url: https://github.com/fern-api/fern/pull/11548
+          headRepositoryOwner: fern-api
+        - headRefName: patrick/ts/defaults-literals-redesign
+          number: 10464
+          title: 'feat(typescript): defaults, literals redesign'
+          state: CLOSED
+          url: https://github.com/fern-api/fern/pull/10464
+          headRepositoryOwner: fern-api
+        - headRefName: patrick/internal/rename-openapi-ir-to-fern-tests
+          number: 10360
+          title: 'chore(internal): rename some v1 parsers to `spec-to-openapi-ir`'
+          state: CLOSED
+          url: https://github.com/fern-api/fern/pull/10360
+          headRepositoryOwner: fern-api
+        - headRefName: patrick/python/uv-part-2
+          number: 9772
+          title: 'feat(python): switch to `uv`'
+          state: CLOSED
+          url: https://github.com/fern-api/fern/pull/9772
+          headRepositoryOwner: fern-api
+        - headRefName: patrick/python-seed-nitpick
+          number: 9613
+          title: 'chore(python): remove default seed setting, fix changelog'
+          state: CLOSED
+          url: https://github.com/fern-api/fern/pull/9613
+          headRepositoryOwner: fern-api
+    /Users/Patrick/fern/fern-cg:
+        - headRefName: main
+          number: 16114
+          title: Add Datadog Synthetic tests workflow
+          state: OPEN
+          url: https://github.com/fern-api/fern/pull/16114
+          headRepositoryOwner: adriandorcz5-sys
+        - headRefName: main
+          number: 12960
+          title: 'feat(rust): Added unit test infra to generated rust sdk'
+          state: CLOSED
+          url: https://github.com/fern-api/fern/pull/12960
+          headRepositoryOwner: HoaX7
+        - headRefName: main
+          number: 6886
+          title: 'chore: use issue labeler action'
+          state: CLOSED
+          url: https://github.com/fern-api/fern/pull/6886
+          headRepositoryOwner: Prachi-Jamdade
+        - headRefName: main
+          number: 6145
+          title: 'chore(docs): npm automation token screenshot'
+          state: MERGED
+          url: https://github.com/fern-api/fern/pull/6145
+          headRepositoryOwner: Haakam21
+        - headRefName: main
+          number: 5466
+          title: 'fix(openapi): converts float type to the appropriate OpenAPI 3 type'
+          state: MERGED
+          url: https://github.com/fern-api/fern/pull/5466
+          headRepositoryOwner: JacobNWolf
+        - headRefName: devin/1780345218-embed-rust-sdk-in-cli
+          number: 16168
+          title: 'feat(cli-generator): embed typed Rust SDK as workspace member in CLI output'
+          state: OPEN
+          url: https://github.com/fern-api/fern/pull/16168
+          headRepositoryOwner: fern-api
+    /Users/Patrick/fern/fern-cli-1:
+        - headRefName: devin/1779221903-cli-v2-api-enrich
+          number: 15989
+          title: 'feat(cli): add `fern api enrich` command for AI-generated examples'
+          state: OPEN
+          url: https://github.com/fern-api/fern/pull/15989
+          headRepositoryOwner: fern-api
+        - headRefName: main
+          number: 16114
+          title: Add Datadog Synthetic tests workflow
+          state: OPEN
+          url: https://github.com/fern-api/fern/pull/16114
+          headRepositoryOwner: adriandorcz5-sys
+        - headRefName: main
+          number: 12960
+          title: 'feat(rust): Added unit test infra to generated rust sdk'
+          state: CLOSED
+          url: https://github.com/fern-api/fern/pull/12960
+          headRepositoryOwner: HoaX7
+        - headRefName: main
+          number: 6886
+          title: 'chore: use issue labeler action'
+          state: CLOSED
+          url: https://github.com/fern-api/fern/pull/6886
+          headRepositoryOwner: Prachi-Jamdade
+        - headRefName: main
+          number: 6145
+          title: 'chore(docs): npm automation token screenshot'
+          state: MERGED
+          url: https://github.com/fern-api/fern/pull/6145
+          headRepositoryOwner: Haakam21
+        - headRefName: main
+          number: 5466
+          title: 'fix(openapi): converts float type to the appropriate OpenAPI 3 type'
+          state: MERGED
+          url: https://github.com/fern-api/fern/pull/5466
+          headRepositoryOwner: JacobNWolf
+        - headRefName: patrick/cli-v2/export
+          number: 13646
+          title: 'feat(cli-v2): `fern api export`'
+          state: CLOSED
+          url: https://github.com/fern-api/fern/pull/13646
+          headRepositoryOwner: fern-api
+    /Users/Patrick/fern/fern-cli-2:
+        - headRefName: patrick/parser/resumable-without-format-sse
+          number: 16116
+          title: 'fix(parser): honor operation-level resumable on auto-detected SSE endpoints'
+          state: MERGED
+          url: https://github.com/fern-api/fern/pull/16116
+          headRepositoryOwner: fern-api
+        - headRefName: main
+          number: 16114
+          title: Add Datadog Synthetic tests workflow
+          state: OPEN
+          url: https://github.com/fern-api/fern/pull/16114
+          headRepositoryOwner: adriandorcz5-sys
+        - headRefName: main
+          number: 12960
+          title: 'feat(rust): Added unit test infra to generated rust sdk'
+          state: CLOSED
+          url: https://github.com/fern-api/fern/pull/12960
+          headRepositoryOwner: HoaX7
+        - headRefName: main
+          number: 6886
+          title: 'chore: use issue labeler action'
+          state: CLOSED
+          url: https://github.com/fern-api/fern/pull/6886
+          headRepositoryOwner: Prachi-Jamdade
+        - headRefName: main
+          number: 6145
+          title: 'chore(docs): npm automation token screenshot'
+          state: MERGED
+          url: https://github.com/fern-api/fern/pull/6145
+          headRepositoryOwner: Haakam21
+        - headRefName: main
+          number: 5466
+          title: 'fix(openapi): converts float type to the appropriate OpenAPI 3 type'
+          state: MERGED
+          url: https://github.com/fern-api/fern/pull/5466
+          headRepositoryOwner: JacobNWolf
+    /Users/Patrick/fern/fern-csharp:
+        - headRefName: main
+          number: 16114
+          title: Add Datadog Synthetic tests workflow
+          state: OPEN
+          url: https://github.com/fern-api/fern/pull/16114
+          headRepositoryOwner: adriandorcz5-sys
+        - headRefName: main
+          number: 12960
+          title: 'feat(rust): Added unit test infra to generated rust sdk'
+          state: CLOSED
+          url: https://github.com/fern-api/fern/pull/12960
+          headRepositoryOwner: HoaX7
+        - headRefName: main
+          number: 6886
+          title: 'chore: use issue labeler action'
+          state: CLOSED
+          url: https://github.com/fern-api/fern/pull/6886
+          headRepositoryOwner: Prachi-Jamdade
+        - headRefName: main
+          number: 6145
+          title: 'chore(docs): npm automation token screenshot'
+          state: MERGED
+          url: https://github.com/fern-api/fern/pull/6145
+          headRepositoryOwner: Haakam21
+        - headRefName: main
+          number: 5466
+          title: 'fix(openapi): converts float type to the appropriate OpenAPI 3 type'
+          state: MERGED
+          url: https://github.com/fern-api/fern/pull/5466
+          headRepositoryOwner: JacobNWolf
+    /Users/Patrick/fern/fern-csharp-2:
+        - headRefName: patrick/csharp/raw-response-streaming-void
+          number: 16454
+          title: 'feat(csharp): emit raw response wrappers for streaming and void endpoints'
+          state: MERGED
+          url: https://github.com/fern-api/fern/pull/16454
+          headRepositoryOwner: fern-api
+        - headRefName: main
+          number: 16114
+          title: Add Datadog Synthetic tests workflow
+          state: OPEN
+          url: https://github.com/fern-api/fern/pull/16114
+          headRepositoryOwner: adriandorcz5-sys
+        - headRefName: main
+          number: 12960
+          title: 'feat(rust): Added unit test infra to generated rust sdk'
+          state: CLOSED
+          url: https://github.com/fern-api/fern/pull/12960
+          headRepositoryOwner: HoaX7
+        - headRefName: main
+          number: 6886
+          title: 'chore: use issue labeler action'
+          state: CLOSED
+          url: https://github.com/fern-api/fern/pull/6886
+          headRepositoryOwner: Prachi-Jamdade
+        - headRefName: main
+          number: 6145
+          title: 'chore(docs): npm automation token screenshot'
+          state: MERGED
+          url: https://github.com/fern-api/fern/pull/6145
+          headRepositoryOwner: Haakam21
+        - headRefName: main
+          number: 5466
+          title: 'fix(openapi): converts float type to the appropriate OpenAPI 3 type'
+          state: MERGED
+          url: https://github.com/fern-api/fern/pull/5466
+          headRepositoryOwner: JacobNWolf
+    /Users/Patrick/fern/fern-go:
+        - headRefName: main
+          number: 16114
+          title: Add Datadog Synthetic tests workflow
+          state: OPEN
+          url: https://github.com/fern-api/fern/pull/16114
+          headRepositoryOwner: adriandorcz5-sys
+        - headRefName: main
+          number: 12960
+          title: 'feat(rust): Added unit test infra to generated rust sdk'
+          state: CLOSED
+          url: https://github.com/fern-api/fern/pull/12960
+          headRepositoryOwner: HoaX7
+        - headRefName: main
+          number: 6886
+          title: 'chore: use issue labeler action'
+          state: CLOSED
+          url: https://github.com/fern-api/fern/pull/6886
+          headRepositoryOwner: Prachi-Jamdade
+        - headRefName: main
+          number: 6145
+          title: 'chore(docs): npm automation token screenshot'
+          state: MERGED
+          url: https://github.com/fern-api/fern/pull/6145
+          headRepositoryOwner: Haakam21
+        - headRefName: main
+          number: 5466
+          title: 'fix(openapi): converts float type to the appropriate OpenAPI 3 type'
+          state: MERGED
+          url: https://github.com/fern-api/fern/pull/5466
+          headRepositoryOwner: JacobNWolf
+    /Users/Patrick/fern/fern-java:
+        - headRefName: main
+          number: 12960
+          title: 'feat(rust): Added unit test infra to generated rust sdk'
+          state: CLOSED
+          url: https://github.com/fern-api/fern/pull/12960
+          headRepositoryOwner: HoaX7
+        - headRefName: main
+          number: 6886
+          title: 'chore: use issue labeler action'
+          state: CLOSED
+          url: https://github.com/fern-api/fern/pull/6886
+          headRepositoryOwner: Prachi-Jamdade
+        - headRefName: main
+          number: 6145
+          title: 'chore(docs): npm automation token screenshot'
+          state: MERGED
+          url: https://github.com/fern-api/fern/pull/6145
+          headRepositoryOwner: Haakam21
+        - headRefName: main
+          number: 5466
+          title: 'fix(openapi): converts float type to the appropriate OpenAPI 3 type'
+          state: MERGED
+          url: https://github.com/fern-api/fern/pull/5466
+          headRepositoryOwner: JacobNWolf
+        - headRefName: main
+          number: 5025
+          title: Removing axios by upgrading sdk versions
+          state: CLOSED
+          url: https://github.com/fern-api/fern/pull/5025
+          headRepositoryOwner: fern-api
+    /Users/Patrick/fern/fern-java-2:
+        - headRefName: main
+          number: 12960
+          title: 'feat(rust): Added unit test infra to generated rust sdk'
+          state: CLOSED
+          url: https://github.com/fern-api/fern/pull/12960
+          headRepositoryOwner: HoaX7
+        - headRefName: main
+          number: 6886
+          title: 'chore: use issue labeler action'
+          state: CLOSED
+          url: https://github.com/fern-api/fern/pull/6886
+          headRepositoryOwner: Prachi-Jamdade
+        - headRefName: main
+          number: 6145
+          title: 'chore(docs): npm automation token screenshot'
+          state: MERGED
+          url: https://github.com/fern-api/fern/pull/6145
+          headRepositoryOwner: Haakam21
+        - headRefName: main
+          number: 5466
+          title: 'fix(openapi): converts float type to the appropriate OpenAPI 3 type'
+          state: MERGED
+          url: https://github.com/fern-api/fern/pull/5466
+          headRepositoryOwner: JacobNWolf
+        - headRefName: main
+          number: 5025
+          title: Removing axios by upgrading sdk versions
+          state: CLOSED
+          url: https://github.com/fern-api/fern/pull/5025
+          headRepositoryOwner: fern-api
+    /Users/Patrick/fern/fern-openapi:
+        - headRefName: main
+          number: 12960
+          title: 'feat(rust): Added unit test infra to generated rust sdk'
+          state: CLOSED
+          url: https://github.com/fern-api/fern/pull/12960
+          headRepositoryOwner: HoaX7
+        - headRefName: main
+          number: 6886
+          title: 'chore: use issue labeler action'
+          state: CLOSED
+          url: https://github.com/fern-api/fern/pull/6886
+          headRepositoryOwner: Prachi-Jamdade
+        - headRefName: main
+          number: 6145
+          title: 'chore(docs): npm automation token screenshot'
+          state: MERGED
+          url: https://github.com/fern-api/fern/pull/6145
+          headRepositoryOwner: Haakam21
+        - headRefName: main
+          number: 5466
+          title: 'fix(openapi): converts float type to the appropriate OpenAPI 3 type'
+          state: MERGED
+          url: https://github.com/fern-api/fern/pull/5466
+          headRepositoryOwner: JacobNWolf
+        - headRefName: main
+          number: 5025
+          title: Removing axios by upgrading sdk versions
+          state: CLOSED
+          url: https://github.com/fern-api/fern/pull/5025
+          headRepositoryOwner: fern-api
+        - headRefName: patrick/openapi/3.1.0
+          number: 14981
+          title: 'feat(openapi): switch to output OAS 3.1.0, release v1.0.0'
+          state: OPEN
+          url: https://github.com/fern-api/fern/pull/14981
+          headRepositoryOwner: fern-api
+    /Users/Patrick/fern/fern-php:
+        - headRefName: main
+          number: 16114
+          title: Add Datadog Synthetic tests workflow
+          state: OPEN
+          url: https://github.com/fern-api/fern/pull/16114
+          headRepositoryOwner: adriandorcz5-sys
+        - headRefName: main
+          number: 12960
+          title: 'feat(rust): Added unit test infra to generated rust sdk'
+          state: CLOSED
+          url: https://github.com/fern-api/fern/pull/12960
+          headRepositoryOwner: HoaX7
+        - headRefName: main
+          number: 6886
+          title: 'chore: use issue labeler action'
+          state: CLOSED
+          url: https://github.com/fern-api/fern/pull/6886
+          headRepositoryOwner: Prachi-Jamdade
+        - headRefName: main
+          number: 6145
+          title: 'chore(docs): npm automation token screenshot'
+          state: MERGED
+          url: https://github.com/fern-api/fern/pull/6145
+          headRepositoryOwner: Haakam21
+        - headRefName: main
+          number: 5466
+          title: 'fix(openapi): converts float type to the appropriate OpenAPI 3 type'
+          state: MERGED
+          url: https://github.com/fern-api/fern/pull/5466
+          headRepositoryOwner: JacobNWolf
+    /Users/Patrick/fern/fern-python:
+        - headRefName: main
+          number: 16114
+          title: Add Datadog Synthetic tests workflow
+          state: OPEN
+          url: https://github.com/fern-api/fern/pull/16114
+          headRepositoryOwner: adriandorcz5-sys
+        - headRefName: main
+          number: 12960
+          title: 'feat(rust): Added unit test infra to generated rust sdk'
+          state: CLOSED
+          url: https://github.com/fern-api/fern/pull/12960
+          headRepositoryOwner: HoaX7
+        - headRefName: main
+          number: 6886
+          title: 'chore: use issue labeler action'
+          state: CLOSED
+          url: https://github.com/fern-api/fern/pull/6886
+          headRepositoryOwner: Prachi-Jamdade
+        - headRefName: main
+          number: 6145
+          title: 'chore(docs): npm automation token screenshot'
+          state: MERGED
+          url: https://github.com/fern-api/fern/pull/6145
+          headRepositoryOwner: Haakam21
+        - headRefName: main
+          number: 5466
+          title: 'fix(openapi): converts float type to the appropriate OpenAPI 3 type'
+          state: MERGED
+          url: https://github.com/fern-api/fern/pull/5466
+          headRepositoryOwner: JacobNWolf
+    /Users/Patrick/fern/fern-python-2:
+        - headRefName: main
+          number: 12960
+          title: 'feat(rust): Added unit test infra to generated rust sdk'
+          state: CLOSED
+          url: https://github.com/fern-api/fern/pull/12960
+          headRepositoryOwner: HoaX7
+        - headRefName: main
+          number: 6886
+          title: 'chore: use issue labeler action'
+          state: CLOSED
+          url: https://github.com/fern-api/fern/pull/6886
+          headRepositoryOwner: Prachi-Jamdade
+        - headRefName: main
+          number: 6145
+          title: 'chore(docs): npm automation token screenshot'
+          state: MERGED
+          url: https://github.com/fern-api/fern/pull/6145
+          headRepositoryOwner: Haakam21
+        - headRefName: main
+          number: 5466
+          title: 'fix(openapi): converts float type to the appropriate OpenAPI 3 type'
+          state: MERGED
+          url: https://github.com/fern-api/fern/pull/5466
+          headRepositoryOwner: JacobNWolf
+        - headRefName: main
+          number: 5025
+          title: Removing axios by upgrading sdk versions
+          state: CLOSED
+          url: https://github.com/fern-api/fern/pull/5025
+          headRepositoryOwner: fern-api
+    /Users/Patrick/fern/fern-ruby:
+        - headRefName: patrick/ruby/emit-inherited-fields-on-objects
+          number: 16180
+          title: 'fix(ruby): emit inherited fields on objects with extends/allOf'
+          state: OPEN
+          url: https://github.com/fern-api/fern/pull/16180
+          headRepositoryOwner: fern-api
+        - headRefName: main
+          number: 16114
+          title: Add Datadog Synthetic tests workflow
+          state: OPEN
+          url: https://github.com/fern-api/fern/pull/16114
+          headRepositoryOwner: adriandorcz5-sys
+        - headRefName: main
+          number: 12960
+          title: 'feat(rust): Added unit test infra to generated rust sdk'
+          state: CLOSED
+          url: https://github.com/fern-api/fern/pull/12960
+          headRepositoryOwner: HoaX7
+        - headRefName: main
+          number: 6886
+          title: 'chore: use issue labeler action'
+          state: CLOSED
+          url: https://github.com/fern-api/fern/pull/6886
+          headRepositoryOwner: Prachi-Jamdade
+        - headRefName: main
+          number: 6145
+          title: 'chore(docs): npm automation token screenshot'
+          state: MERGED
+          url: https://github.com/fern-api/fern/pull/6145
+          headRepositoryOwner: Haakam21
+        - headRefName: main
+          number: 5466
+          title: 'fix(openapi): converts float type to the appropriate OpenAPI 3 type'
+          state: MERGED
+          url: https://github.com/fern-api/fern/pull/5466
+          headRepositoryOwner: JacobNWolf
+    /Users/Patrick/fern/fern-rust:
+        - headRefName: main
+          number: 16114
+          title: Add Datadog Synthetic tests workflow
+          state: OPEN
+          url: https://github.com/fern-api/fern/pull/16114
+          headRepositoryOwner: adriandorcz5-sys
+        - headRefName: main
+          number: 12960
+          title: 'feat(rust): Added unit test infra to generated rust sdk'
+          state: CLOSED
+          url: https://github.com/fern-api/fern/pull/12960
+          headRepositoryOwner: HoaX7
+        - headRefName: main
+          number: 6886
+          title: 'chore: use issue labeler action'
+          state: CLOSED
+          url: https://github.com/fern-api/fern/pull/6886
+          headRepositoryOwner: Prachi-Jamdade
+        - headRefName: main
+          number: 6145
+          title: 'chore(docs): npm automation token screenshot'
+          state: MERGED
+          url: https://github.com/fern-api/fern/pull/6145
+          headRepositoryOwner: Haakam21
+        - headRefName: main
+          number: 5466
+          title: 'fix(openapi): converts float type to the appropriate OpenAPI 3 type'
+          state: MERGED
+          url: https://github.com/fern-api/fern/pull/5466
+          headRepositoryOwner: JacobNWolf
+    /Users/Patrick/fern/fern-typescript:
+        - headRefName: main
+          number: 16114
+          title: Add Datadog Synthetic tests workflow
+          state: OPEN
+          url: https://github.com/fern-api/fern/pull/16114
+          headRepositoryOwner: adriandorcz5-sys
+        - headRefName: main
+          number: 12960
+          title: 'feat(rust): Added unit test infra to generated rust sdk'
+          state: CLOSED
+          url: https://github.com/fern-api/fern/pull/12960
+          headRepositoryOwner: HoaX7
+        - headRefName: main
+          number: 6886
+          title: 'chore: use issue labeler action'
+          state: CLOSED
+          url: https://github.com/fern-api/fern/pull/6886
+          headRepositoryOwner: Prachi-Jamdade
+        - headRefName: main
+          number: 6145
+          title: 'chore(docs): npm automation token screenshot'
+          state: MERGED
+          url: https://github.com/fern-api/fern/pull/6145
+          headRepositoryOwner: Haakam21
+        - headRefName: main
+          number: 5466
+          title: 'fix(openapi): converts float type to the appropriate OpenAPI 3 type'
+          state: MERGED
+          url: https://github.com/fern-api/fern/pull/5466
+          headRepositoryOwner: JacobNWolf
+    /Users/Patrick/fern/fern2:
+        - headRefName: patrick/seed/diff-based-fixture-storage
+          number: 15279
+          title: 'feat(seed): diff-based fixture storage — baseline/ + custom-configs/*.diff'
+          state: CLOSED
+          url: https://github.com/fern-api/fern/pull/15279
+          headRepositoryOwner: fern-api
+        - headRefName: main
+          number: 16114
+          title: Add Datadog Synthetic tests workflow
+          state: OPEN
+          url: https://github.com/fern-api/fern/pull/16114
+          headRepositoryOwner: adriandorcz5-sys
+        - headRefName: main
+          number: 12960
+          title: 'feat(rust): Added unit test infra to generated rust sdk'
+          state: CLOSED
+          url: https://github.com/fern-api/fern/pull/12960
+          headRepositoryOwner: HoaX7
+        - headRefName: main
+          number: 6886
+          title: 'chore: use issue labeler action'
+          state: CLOSED
+          url: https://github.com/fern-api/fern/pull/6886
+          headRepositoryOwner: Prachi-Jamdade
+        - headRefName: main
+          number: 6145
+          title: 'chore(docs): npm automation token screenshot'
+          state: MERGED
+          url: https://github.com/fern-api/fern/pull/6145
+          headRepositoryOwner: Haakam21
+        - headRefName: main
+          number: 5466
+          title: 'fix(openapi): converts float type to the appropriate OpenAPI 3 type'
+          state: MERGED
+          url: https://github.com/fern-api/fern/pull/5466
+          headRepositoryOwner: JacobNWolf
+        - headRefName: pt/test-ete-ci
+          number: 16094
+          title: 'chore(ci): empty PR to verify ETE workflow'
+          state: OPEN
+          url: https://github.com/fern-api/fern/pull/16094
+          headRepositoryOwner: fern-api
+        - headRefName: tanmay/typescript-pin-mute-stream-transitive-resolution
+          number: 16083
+          title: 'fix(cli): disable yarn/npm engine checks in generator containers'
+          state: CLOSED
+          url: https://github.com/fern-api/fern/pull/16083
+          headRepositoryOwner: fern-api
+    /Users/Patrick/fern/fiddle: []
+    /Users/Patrick/fern/marketing-site: []
+    /Users/Patrick/sdks/auth0-python:
+        - headRefName: master
+          number: 831
+          title: 'Fixes #789 - email_verified can be a string or boolean'
+          state: CLOSED
+          url: https://github.com/auth0/auth0-python/pull/831
+          headRepositoryOwner: timgates42
+        - headRefName: master
+          number: 690
+          title: 'test: add global seed'
+          state: CLOSED
+          url: https://github.com/auth0/auth0-python/pull/690
+          headRepositoryOwner: allrob23
+        - headRefName: master
+          number: 621
+          title: Async All the Way
+          state: DRAFT
+          url: https://github.com/auth0/auth0-python/pull/621
+          headRepositoryOwner: padrepitufo
+        - headRefName: master
+          number: 597
+          title: Update cryptography requirements.txt
+          state: MERGED
+          url: https://github.com/auth0/auth0-python/pull/597
+          headRepositoryOwner: skjensen
+        - headRefName: master
+          number: 506
+          title: Fix asyncify for users client where token is not required
+          state: MERGED
+          url: https://github.com/auth0/auth0-python/pull/506
+          headRepositoryOwner: cgearing
+    /Users/Patrick/sdks/auth0-ruby-sdk:
+        - headRefName: fern-bot/2026-01-20T20-45Z
+          number: 3
+          title: SDK regeneration
+          state: OPEN
+          url: https://github.com/fern-demo/auth0-ruby-sdk/pull/3
+          headRepositoryOwner: fern-demo
+    /Users/Patrick/sdks/forks/networkscan:
+        - headRefName: go-update
+          number: 252
+          title: version bump
+          state: OPEN
+          url: https://github.com/method-security/networkscan/pull/252
+          headRepositoryOwner: patrickthornton
+    /Users/Patrick/snippets/auth0-myorg-snippets: []
+    /Users/Patrick/snippets/twilio-core-snippets: []

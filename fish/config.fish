@@ -11,6 +11,15 @@ abbr -a l eza -1 -l -a --no-user --no-permissions --icons=always
 abbr -a ll eza -1 -l -a --total-size --no-user --no-permissions --icons=always
 abbr -a lt eza -T -l -a --total-size --no-user --no-permissions --icons=always
 
+abbr -a a aerospace
+abbr -a aj aerospace join-with
+abbr -a ajl aerospace join-with left
+abbr -a ajr aerospace join-with right
+abbr -a aju aerospace join-with up
+abbr -a ajd aerospace join-with down
+abbr -a af aerospace flatten-workspace-tree
+abbr -a ar aerospace reload-config
+
 # brew
 abbr -a b brew
 abbr -a bi 'brew install'
@@ -34,7 +43,7 @@ abbr -a cs zed-preview ~/dotfiles/starship
 abbr -a ch zed-preview ~/dotfiles/helix
 abbr -a cz zed-preview ~/dotfiles/zellij
 abbr -a cg zed-preview ~/dotfiles/gdb/.gdbinit
-
+abbr -a ce zed-preview ~/dotfiles/aerospace
 # localizing config files
 abbr -a cpg cp ~/dotfiles/.gitignore .gitignore
 abbr -a cpp cp ~/dotfiles/pyright/pyrightconfig.json pyrightconfig.json
@@ -61,6 +70,8 @@ abbr -a ht http
 abbr -a j zellij
 abbr -a jl jless
 abbr -a lg lazygit
+
+abbr -a d claude
 
 abbr -a m pnpm
 abbr -a mi pnpm i
@@ -143,6 +154,8 @@ abbr -a us uv sync
 abbr -a um uv run mypy .
 abbr -a up uv run pytest -rP .
 abbr -a ut 'uv run mypy . && uv run pytest -rP .'
+
+abbr -a x clear
 
 abbr -a y yarn
 abbr -a yt yarn test
@@ -341,17 +354,14 @@ function fdir
 end
 
 function sgen
-    argparse 'o/output-to-seed' 's/scripts' 'l/local' -- $argv
+    argparse 's/scripts' 'r/remote' -- $argv
     or return
 
-    set -l cmd pnpm seed run --generator $argv[1]-sdk --path ~/configs/$argv[2]-fern-config/fern --log-level debug --skipScripts
-    if set -ql _flag_o
-        set cmd $cmd --output-path ~/.seed/$argv[2]-$argv[1]
-    end
+    set -l cmd pnpm seed run --generator $argv[1]-sdk --path ~/configs/$argv[2]-fern-config/fern --log-level debug --skipScripts --output-path ~/.seed/$argv[2]-$argv[1]
     if set -ql _flag_s
         set cmd (string replace --all -- '--skipScripts' '' $cmd)
     end
-    if set -ql _flag_l
+    if not set -ql _flag_r
         set cmd $cmd --local
     end
 
@@ -360,17 +370,14 @@ function sgen
 end
 
 function sge
-    argparse 'o/output-to-seed' 's/scripts' 'l/local' -- $argv
+    argparse 's/scripts' 'r/remote' -- $argv
     or return
 
-    set -l cmd pnpm seed run --generator $argv[1] --path ~/configs/$argv[2]-fern-config/fern --log-level debug --skipScripts
-    if set -ql _flag_o
-        set cmd $cmd --output-path ~/.seed/$argv[2]-$argv[1]
-    end
+    set -l cmd pnpm seed run --generator $argv[1] --path ~/configs/$argv[2]-fern-config/fern --log-level debug --skipScripts --output-path ~/.seed/$argv[2]-$argv[1]
     if set -ql _flag_s
         set cmd (string replace --all -- '--skipScripts' '' $cmd)
     end
-    if set -ql _flag_l
+    if not set -ql _flag_r
         set cmd $cmd --local
     end
 
@@ -379,17 +386,14 @@ function sge
 end
 
 function sgennonce
-    argparse 'o/output-to-seed' 's/scripts' 'l/local' -- $argv
+    argparse 's/scripts' 'r/remote' -- $argv
     or return
 
-    set -l cmd pnpm seed run --generator $argv[1]-sdk --path ~/nonce-configs/$argv[2]-fern-config/fern --log-level debug --skipScripts
-    if set -ql _flag_o
-        set cmd $cmd --output-path ~/.seed/$argv[2]-$argv[1]
-    end
+    set -l cmd pnpm seed run --generator $argv[1]-sdk --path ~/nonce-configs/$argv[2]-fern-config/fern --log-level debug --skipScripts --output-path ~/.seed/$argv[2]-$argv[1]
     if set -ql _flag_s
         set cmd (string replace --all -- '--skipScripts' '' $cmd)
     end
-    if set -ql _flag_l
+    if not set -ql _flag_r
         set cmd $cmd --local
     end
 
@@ -398,14 +402,14 @@ function sgennonce
 end
 
 function stest
-    argparse 's/scripts' 'l/local' -- $argv
+    argparse 's/scripts' 'r/remote' -- $argv
     or return
 
     set -l cmd pnpm seed test --generator $argv[1]-sdk --fixture $argv[2] --outputFolder $argv[3] --log-level debug --skipScripts
     if set -ql _flag_s
         set cmd (string replace --all -- '--skipScripts' '' $cmd)
     end
-    if set -ql _flag_l
+    if not set -ql _flag_r
         set cmd $cmd --local
     end
 
@@ -414,11 +418,11 @@ function stest
 end
 
 function stestall
-    argparse 'l/local' -- $argv
+    argparse 'r/remote' -- $argv
     or return
 
     set -l cmd pnpm seed test --generator $argv[1]-sdk
-    if set -ql _flag_l
+    if not set -ql _flag_r
         set cmd $cmd --local
     end
 
@@ -428,6 +432,16 @@ end
 
 function gd
     git diff --no-index $argv[1] $argv[2]
+end
+
+function gu
+    set -l lockfile (git rev-parse --git-dir 2>/dev/null)/index.lock
+    if test -f $lockfile
+        rm $lockfile
+        echo "Removed $lockfile"
+    else
+        echo "No lock file found"
+    end
 end
 
 function javaver
@@ -521,6 +535,36 @@ function testj
     ./gradlew build
 end
 
+function testg
+    echo "=========== golangci-lint =========="
+    printf 'version: "2"\nlinters:\n  exclusions:\n    paths:\n      - dynamic-snippets\n' > .golangci.yml
+    golangci-lint run --timeout=5m --allow-parallel-runners
+    or return 1
+    echo
+
+    set -l PROJECT_NAME "wiremock-"(basename (dirname (pwd)) | tr -d ".")
+    if test -f wiremock/docker-compose.test.yml
+        echo "=========== wiremock up =========="
+        docker compose -p $PROJECT_NAME -f wiremock/docker-compose.test.yml down
+        docker compose -p $PROJECT_NAME -f wiremock/docker-compose.test.yml up -d
+        set -lx WIREMOCK_URL "http://localhost:"(docker compose -p $PROJECT_NAME -f wiremock/docker-compose.test.yml port wiremock 8080 | cut -d: -f2)
+        echo "WIREMOCK_URL=$WIREMOCK_URL"
+        echo
+    end
+
+    echo "=========== CGO_ENABLED=0 go test ./... =========="
+    CGO_ENABLED=0 go test ./...
+    set -l TEST_EXIT_CODE $status
+
+    if test -f wiremock/docker-compose.test.yml
+        echo
+        echo "=========== wiremock down =========="
+        docker compose -p $PROJECT_NAME -f wiremock/docker-compose.test.yml down
+    end
+
+    return $TEST_EXIT_CODE
+end
+
 function testh
     echo "=========== composer install =========="
     composer install
@@ -551,6 +595,11 @@ function testr
 
     echo "=========== docker compose -f wiremock/docker-compose.test.yml down =========="
     docker compose -f wiremock/docker-compose.test.yml down
+end
+
+abbr -a ferniec 'pnpm dist:cli:dev && pnpm dist:bin:local'
+function fernie
+    /Users/Patrick/fern/fern-cli-1/packages/cli/cli-v2/dist/bin/fern-darwin-arm64 $argv
 end
 
 # Added by `rbenv init` on Fri Feb 13 11:29:54 EST 2026

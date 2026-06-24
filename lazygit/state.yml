@@ -1,96 +1,7 @@
 lastupdatecheck: 0
 recentrepos:
+    - /Users/patrick/dotfiles
     - /Users/Patrick/dotfiles
-    - /Users/Patrick/configs/plantstore-demo-fern-config
-    - /Users/Patrick/fern/fern
-    - /Users/Patrick/fern/fern-go
-    - /Users/Patrick/fern/cli-sdk
-    - /Users/Patrick/configs/brevo-fern-config
-    - /Users/Patrick/fern/fern-php
-    - /Users/Patrick/fern/fern2
-    - /Users/Patrick/fern/fern-csharp-2
-    - /Users/Patrick/fern/fern-rust
-    - /Users/Patrick/fern/cli-sdk-3
-    - /Users/Patrick/snippets/twilio-core-snippets
-    - /Users/Patrick/fern/fern-csharp
-    - /Users/Patrick/fern/fern-typescript
-    - /Users/Patrick/fern/fern-cg
-    - /Users/Patrick/fern/cli-sdk-2
-    - /Users/Patrick/configs/auth0-fern-config
-    - /Users/Patrick/fern/fern-python
-    - /Users/Patrick/fern/fern-ruby
-    - /Users/Patrick/fern/fern-cli-1
-    - /Users/Patrick/fern/fern-cli-2
-    - /Users/Patrick/fern/fiddle
-    - /Users/Patrick/configs/elevenlabs-fern-config
-    - /Users/Patrick/fern/marketing-site
-    - /Users/Patrick/configs/google-fern-config
-    - /Users/Patrick/fern/fern-java
-    - /Users/Patrick/configs/deepgram-fern-config
-    - /Users/Patrick/fern/fern-java-2
-    - /Users/Patrick/fern/fern-python-2
-    - /Users/Patrick/sdks/auth0-python
-    - /Users/Patrick/snippets/auth0-myorg-snippets
-    - /Users/Patrick/sdks/forks/networkscan
-    - /Users/Patrick/configs/method-fern-config
-    - /Users/Patrick/configs/vectara-fern-config
-    - /Users/Patrick/sdks/auth0-ruby-sdk
-    - /Users/Patrick/fern/fern-openapi
-    - /Users/Patrick/configs/candid-fern-config
-    - /Users/Patrick/snippets/auth0-management-snippets
-    - /Users/Patrick/snippets/auth0-myaccount-snippets
-    - /Users/Patrick/fern/fern-swift
-    - /Users/Patrick/fern/fern-java-3
-    - /Users/Patrick/configs/auth0-myorg-fern-config
-    - /Users/Patrick/sdks/forks/auth0-java
-    - /Users/Patrick/sdks/auth0-java
-    - /Users/Patrick/sdks/deepgram-rust-sdk
-    - /Users/Patrick/sdks/auth0-myorg-java-sdk
-    - /Users/Patrick/sdks/auth0.net
-    - /Users/Patrick/sdks/management.net
-    - /Users/Patrick/nonce-configs/payabli-fern-config/fern/apis/payabliApi/.preview/fern-go-sdk
-    - /Users/Patrick/fern/fern-platform
-    - /Users/Patrick/sdks/go-auth0
-    - /Users/Patrick/sdks/forks/go-auth0
-    - /Users/Patrick/configs/vapi-fern-config/fern/apis/api/.preview/fern-python-sdk
-    - /Users/Patrick/configs/phenoml-fern-config
-    - /Users/Patrick/configs/samsara-fern-config
-    - /Users/Patrick/configs/proto-fern-config
-    - /Users/Patrick/configs/fynapse-fern-config
-    - /Users/Patrick/sdks/auth0-myorg-python-sdk
-    - /Users/Patrick/configs/kard-fern-config
-    - /Users/Patrick/fern/tools
-    - /Users/Patrick/fern/docs
-    - /Users/Patrick/configs/agentmail-fern-config
-    - /Users/Patrick/sdks/auth0-php-sdk
-    - /Users/Patrick/sdks/forks/samsara-java
-    - /Users/Patrick/sdks/samsara-java
-    - /Users/Patrick/configs/thera-fern-config
-    - /Users/Patrick/snippets/snippets-starter
-    - /Users/Patrick/sdks/auth0-php
-    - /Users/Patrick/configs/square-fern-config
-    - /Users/Patrick/fern/sync-openapi
-    - /Users/Patrick/fern/dummy-configs
-    - /Users/Patrick/configs/fluidstack-fern-config
-    - /Users/Patrick/configs/fathomx-fern-config
-    - /Users/Patrick/sdks/auth0-python-sdk
-    - /Users/Patrick/sdks/auth0-java-sdk
-    - /Users/Patrick/sdks/node-auth0
-    - /Users/Patrick/sdks/forks/node-auth0
-    - /Users/Patrick/sdks/samsara-dotnet
-    - /Users/Patrick/fern/frond
-    - /Users/Patrick/configs/pipedream-fern-config
-    - /Users/Patrick/configs/auth0-myaccount-fern-config
-    - /Users/Patrick/configs/schematic-fern-config
-    - /Users/Patrick/sdks/auth0-node-sdk
-    - /Users/Patrick/sands/test/patrick-python-sdk
-    - /Users/Patrick/sands/test/patrick-node-sdk
-    - /Users/Patrick/sdks/athena-python
-    - /Users/Patrick/snippets/merge-snippets
-    - /Users/Patrick/sands/sokoban
-    - /Users/Patrick/sands/rust50
-    - /Users/Patrick/sdks/deepgram-python-core
-    - /Users/Patrick/fern/venus
 startuppopupversion: 5
 didshowhunkstaginghint: true
 lastversion: 0.62.2
@@ -919,3 +830,4 @@ githubPullRequests:
           headRepositoryOwner: patrickthornton
     /Users/Patrick/snippets/auth0-myorg-snippets: []
     /Users/Patrick/snippets/twilio-core-snippets: []
+    /Users/patrick/dotfiles: []

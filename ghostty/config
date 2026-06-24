@@ -1,0 +1,32 @@
+# shell
+command = /opt/homebrew/bin/fish
+
+# multiplexer approach
+# command = /opt/homebrew/bin/zellij options --default-shell nu
+
+# font
+font-family = MesloLGS Nerd Font Mono
+font-size = 13
+
+# window
+progress-style = false
+window-padding-balance = true
+quit-after-last-window-closed = true
+auto-update = download
+window-decoration = none
+macos-titlebar-style = hidden
+macos-option-as-alt = true
+background-opacity = 1
+
+# mouse
+mouse-hide-while-typing = true
+
+# selection
+copy-on-select = clipboard
+
+# keybinds
+# Shift+Return -> ESC + CR (matches old alacritty binding)
+keybind = shift+enter=text:\x1b\r
+
+# theme
+theme = 0x96f

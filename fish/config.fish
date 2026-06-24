@@ -39,6 +39,7 @@ abbr -a cr cd - # cd return
 abbr -a cf zed-preview ~/dotfiles/fish
 abbr -a cn zed-preview ~/dotfiles/nushell
 abbr -a ca zed-preview ~/dotfiles/alacritty
+abbr -a cgh zed-preview ~/dotfiles/ghostty
 abbr -a cs zed-preview ~/dotfiles/starship
 abbr -a ch zed-preview ~/dotfiles/helix
 abbr -a cz zed-preview ~/dotfiles/zellij
@@ -175,6 +176,9 @@ set fish_greeting
 set -x -g SHELL /opt/homebrew/bin/fish
 set -x -g EDITOR /opt/homebrew/bin/zed-preview
 set -x -g N_PREFIX ~/.n
+# Node's bundled CA store doesn't trust some roots macOS does (e.g. GTS Root R4),
+# breaking HTTPS in Node CLIs like fern. Point Node at the system CA bundle.
+set -x -g NODE_EXTRA_CA_CERTS /etc/ssl/cert.pem
 
 abbr -a r source ~/.config/fish/config.fish
 

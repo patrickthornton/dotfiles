@@ -17,6 +17,7 @@ alias cb = cd `..`
 
 alias cn = zed ~/dotfiles/nushell
 alias ca = zed ~/dotfiles/alacritty
+alias cgh = zed ~/dotfiles/ghostty
 alias cs = zed ~/dotfiles/starship
 alias ch = zed ~/dotfiles/helix
 alias cz = zed ~/dotfiles/zellij

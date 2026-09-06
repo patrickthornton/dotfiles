@@ -2,7 +2,7 @@
 command = /opt/homebrew/bin/fish
 
 # multiplexer approach
-# command = /opt/homebrew/bin/zellij options --default-shell nu
+# command = /opt/homebrew/bin/zellij options --default-shell fish
 
 # font
 font-family = MesloLGS Nerd Font Mono

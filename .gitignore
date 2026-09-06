@@ -27,5 +27,3 @@ vite.config.ts.timestamp-*
 .DS_Store
 Desktop.ini
 
-# specific to dotfiles
-nushell/history.txt

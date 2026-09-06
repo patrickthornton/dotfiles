@@ -37,8 +37,6 @@ abbr -a cr cd - # cd return
 
 # config editing
 abbr -a cf zed-preview ~/dotfiles/fish
-abbr -a cn zed-preview ~/dotfiles/nushell
-abbr -a ca zed-preview ~/dotfiles/alacritty
 abbr -a cgh zed-preview ~/dotfiles/ghostty
 abbr -a cs zed-preview ~/dotfiles/starship
 abbr -a ch zed-preview ~/dotfiles/helix
@@ -93,7 +91,7 @@ abbr -a nr bun --bun run dev
 abbr -a nb bun --bun run build
 abbr -a nn bun run
 
-abbr -a nf neofetch
+abbr -a nf fastfetch
 
 abbr -a o cargo
 abbr -a oa cargo add

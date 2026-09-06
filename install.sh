@@ -33,7 +33,7 @@ for arg in "$@"; do
 done
 
 run() { # echo + execute (or just echo in dry-run)
-  if $DRY_RUN; then echo "  would: $*"; else eval "$@"; fi
+  if $DRY_RUN; then echo "  would: $*"; else "$@"; fi
 }
 
 link() { # link <repo-relative-src> <absolute-dst>
@@ -43,15 +43,15 @@ link() { # link <repo-relative-src> <absolute-dst>
     echo "skip (missing in repo): $1"
     return
   fi
-  run "mkdir -p \"$(dirname "$dst")\""
+  run mkdir -p "$(dirname "$dst")"
   if [ -L "$dst" ]; then
-    run "rm \"$dst\""                       # stale/old symlink — replace
+    run rm "$dst"                       # stale/old symlink — replace
   elif [ -e "$dst" ]; then
     local backup="$dst.backup.$(date +%Y%m%d%H%M%S)"
     echo "  backing up existing $dst"
-    run "mv \"$dst\" \"$backup\""
+    run mv "$dst" "$backup"
   fi
-  run "ln -s \"$src\" \"$dst\""
+  run ln -s "$src" "$dst"
   echo "  linked $dst -> $src"
 }
 
@@ -63,7 +63,6 @@ $DRY_RUN && echo "(dry run — no changes will be made)"
 echo
 
 echo "==> ~/.config directory configs"
-link alacritty "$CONFIG/alacritty"
 link aerospace "$CONFIG/aerospace"
 link borders   "$CONFIG/borders"
 link fish      "$CONFIG/fish"
@@ -81,7 +80,6 @@ link hushlogin    "$HOME/.hushlogin"                     # silences the macOS "L
 
 echo "==> ~/Library/Application Support configs"
 link lazygit "$APPSUP/lazygit"
-link nushell "$APPSUP/nushell"
 
 echo
 echo "symlinks done."
@@ -90,12 +88,16 @@ if $DO_BREW; then
   echo
   echo "==> Homebrew"
   if ! command -v brew >/dev/null 2>&1; then
-    run "/bin/bash -c \"\$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\""
+    if $DRY_RUN; then
+      echo "  would: install homebrew via the official install script"
+    else
+      /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    fi
     # make brew available for the rest of this run (Apple Silicon path)
     if [ -x /opt/homebrew/bin/brew ]; then eval "$(/opt/homebrew/bin/brew shellenv)"; fi
   fi
   echo "==> brew bundle (Brewfile)"
-  run "brew bundle --file=\"$DOTFILES/Brewfile\""
+  run brew bundle --file="$DOTFILES/Brewfile"
 fi
 
 echo

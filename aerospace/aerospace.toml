@@ -5,13 +5,13 @@
 after-login-command = []
 after-startup-command = [
   'exec-and-forget borders active_color=0xffe1e3e4 inactive_color=0xff494d64 width=5.0 style=round',
-  'exec-and-forget /Users/patrick/.config/borders/ghostty-square.sh'
+  'exec-and-forget $HOME/.config/borders/ghostty-square.sh'
 ]
 start-at-login = false
 
 # Ghostty windows get square borders (global default is round); see the
 # on-window-detected rule and ghostty-square.sh.
-exec-on-workspace-change = ['/bin/sh', '-c', '/Users/patrick/.config/borders/ghostty-square.sh']
+exec-on-workspace-change = ['/bin/sh', '-c', '$HOME/.config/borders/ghostty-square.sh']
 
 enable-normalization-flatten-containers = true
 enable-normalization-opposite-orientation-for-nested-containers = true
@@ -47,7 +47,7 @@ run = 'move-node-to-workspace F'
 
 [[on-window-detected]]
 if.app-id = 'com.mitchellh.ghostty'
-run = ['move-node-to-workspace T', 'exec-and-forget /Users/patrick/.config/borders/ghostty-square.sh']
+run = ['move-node-to-workspace T', 'exec-and-forget $HOME/.config/borders/ghostty-square.sh']
 
 [[on-window-detected]]
 if.app-id = 'dev.zed.Zed-Preview'

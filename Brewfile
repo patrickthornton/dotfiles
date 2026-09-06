@@ -1,168 +1,188 @@
+tap "codecrafters-io/tap"
 tap "felixkratz/formulae", trusted: true
-tap "isen-ng/dotnet-sdk-versions", trusted: true
+tap "messense/macos-cross-toolchains"
 tap "nikitabobko/tap", trusted: true
 tap "oven-sh/bun", trusted: true
-tap "pilat/devbox", trusted: true
-# Run your GitHub Actions locally
-brew "act"
-# Toolchain of the web
-brew "biome"
+# GNU binary tools for native development
+brew "binutils"
+# A window border system for macOS
+brew "felixkratz/formulae/borders"
 # Resource monitor. C++ version and continuation of bashtop and bpytop
 brew "btop"
-# New way of working with Protocol Buffers
-brew "buf"
+# Incredibly fast JavaScript runtime, bundler, transpiler and package manager - all in one.
+brew "oven-sh/bun/bun"
+# Formatting tools for C, C++, Obj-C, Java, JavaScript, TypeScript
+brew "clang-format"
+# Tool for emulating mouse and keyboard events
+brew "cliclick"
+# CLI for CodeCrafters programming challenges
+brew "codecrafters-io/tap/codecrafters", trusted: true
 # Dependency Manager for PHP
 brew "composer"
-# Debugger for the Go programming language
-brew "delve"
-# Tool for exploring each layer in a docker image
-brew "dive"
 # Modern, maintained replacement for ls
 brew "eza"
 # Like neofetch, but much faster because written mostly in C
 brew "fastfetch"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
+# Play, record, convert, and stream select audio and video codecs
+brew "ffmpeg"
 # User-friendly command-line shell for UNIX-like operating systems
 brew "fish"
 # Command-line fuzzy finder written in Go
 brew "fzf"
+# GNU compiler collection
+brew "gcc"
 # GitHub command-line tool
 brew "gh"
-# Syntax-highlighting pager for git and diff output
-brew "git-delta"
-# Git extension for versioning large files
-brew "git-lfs"
+# Interpreter for PostScript and PDF
+brew "ghostscript"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
 # Fast linters runner for Go
 brew "golangci-lint"
-# Open-source build automation tool based on the Groovy and Kotlin DSL
-brew "gradle"
+# Post-modern modal text editor
+brew "helix"
 # User-friendly cURL replacement (command-line HTTP client)
 brew "httpie"
 # Command-line benchmarking tool
 brew "hyperfine"
-# Git-compatible distributed version control system
-brew "jj"
-# TUI for interacting with the Jujutsu version control system
-brew "jjui"
 # Command-line pager for JSON data
 brew "jless"
+# Lazier way to manage everything docker
+brew "lazydocker"
 # Simple terminal UI for git commands
 brew "lazygit"
-# Java-based project management
-brew "maven"
+# Next-gen compiler infrastructure
+brew "llvm"
 # High performance static file server
 brew "miniserve"
+# Modern Linker
+brew "mold"
 # Deep clean and optimize your Mac
 brew "mole"
 # Experimental optional static type checker for Python
 brew "mypy"
-# Node version management
-brew "n"
-# Single-player roguelike video game
-brew "nethack"
-# Development kit for the Java programming language
-brew "openjdk@11"
-# Development kit for the Java programming language
-brew "openjdk@17"
-# Tool to automatically fix PHP coding standards issues
-brew "php-cs-fixer"
-# General-purpose scripting language
-brew "php@8.1"
-# General-purpose scripting language
-brew "php@8.2"
-# General-purpose scripting language
-brew "php@8.4"
-# Pins GitHub Actions to full hashes and versions
-brew "pinact"
-# Execute binaries from Python packages in isolated environments
-brew "pipx"
+# Open-source, cross-platform JavaScript runtime environment
+brew "node"
+# HTTP load generator, inspired by rakyll/hey with tui animation
+brew "oha"
+# Swiss-army knife of markup format conversion
+brew "pandoc"
 # Fast, disk space efficient package manager
 brew "pnpm"
 # Python package management tool
 brew "poetry"
-# Code formatter for JavaScript, CSS, JSON, GraphQL, Markdown, YAML
-brew "prettier"
+# Highly performant implementation of Python 2 in Python
+brew "pypy"
 # Simple powerful testing with Python
 brew "pytest"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.11"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.13"
+# Generic machine emulator and virtualizer
+brew "qemu"
 # Ruby version manager
 brew "rbenv"
-# Powerful, clean, object-oriented scripting language
-brew "ruby"
 # Extremely fast Python linter, written in Rust
 brew "ruff"
+# Rust toolchain installer
+brew "rustup"
 # Fast and accurate code counter with complexity and COCOMO estimates
 brew "scc"
+# Hunt down social media accounts by username
+brew "sherlock"
 # Cross-shell prompt for astronauts
 brew "starship"
-# Display directories as trees (with optional color/HTML output)
-brew "tree"
+# User interface to the TELNET protocol
+brew "telnet"
+# Program that allows you to count code, quickly
+brew "tokei"
+# Incremental parsing library
+brew "tree-sitter"
+# Markup-based typesetting system
+brew "typst"
 # Extremely fast Python package installer and resolver, written in Rust
 brew "uv"
-# Watch files and take action when they change
-brew "watchman"
-# Process YAML, JSON, XML, CSV and properties documents from the CLI
-brew "yq"
+# Internet file retriever
+brew "wget"
+# macOS cross-compiler toolchain for x86_64 Linux (GNU)
+brew "messense/macos-cross-toolchains/x86_64-unknown-linux-gnu", trusted: true
 # Pluggable terminal workspace, with terminal multiplexer as the base feature
 brew "zellij"
-# Find security issues in GitHub Actions setups
-brew "zizmor"
 # Shell extension to navigate your filesystem faster
 brew "zoxide"
-# UNIX shell (command interpreter)
-brew "zsh"
-# A window border system for macOS
-brew "felixkratz/formulae/borders"
-# Incredibly fast JavaScript runtime, bundler, transpiler and package manager - all in one.
-brew "oven-sh/bun/bun"
-brew "pilat/devbox/devbox"
-# Password manager that keeps all passwords secure behind one password
-cask "1password"
 # AeroSpace is an i3-like tiling window manager for macOS
-cask "nikitabobko/tap/aerospace"
-# GPU-accelerated terminal emulator
-cask "alacritty"
-# Application launcher and productivity software
-cask "alfred"
+cask "nikitabobko/tap/aerospace", trusted: true
+# Memory training application
+cask "anki"
+# Multi-track audio editor and recorder
+cask "audacity"
+# Virtual Audio Driver
+cask "blackhole-16ch"
+# Virtual Audio Driver
+cask "blackhole-2ch"
+# 3D creation suite
+cask "blender"
 # Anthropic's official Claude AI desktop app
 cask "claude"
 # Terminal-based AI coding assistant
 cask "claude-code"
-# Developer platform
-cask "dotnet-sdk"
-# This cask follows releases from https://github.com/dotnet/core/tree/master
-cask "isen-ng/dotnet-sdk-versions/dotnet-sdk8"
-# This cask follows releases from https://github.com/dotnet/core/tree/master
-cask "isen-ng/dotnet-sdk-versions/dotnet-sdk8-0-400"
+# Voice and text chat software
+cask "discord"
+# Emulator to play GameCube and Wii games
+cask "dolphin"
 # Web browser
 cask "firefox"
+cask "font-eb-garamond"
 cask "font-meslo-lg-nerd-font"
 # Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty"
+# Web browser
+cask "google-chrome"
 # System monitoring app
 cask "istat-menus"
-# Menu bar manager
-cask "jordanbaird-ice"
 # Keyboard customiser
 cask "karabiner-elements"
 # Automation software
 cask "keyboard-maestro"
-# Identity verification provider
-cask "okta-verify"
-# HTTP debugging proxy
-cask "proxyman"
+# Blocks all Keyboard and TouchBar input
+cask "keyboardcleantool"
+# VPN client for secure internet access and private browsing
+cask "nordvpn"
+# Open-source software for live streaming and screen recording
+cask "obs"
+# Knowledge base that works on top of a local folder of plain text Markdown files
+cask "obsidian"
+# Extract files and folders from package files, disk images, and archives
+cask "pacifist"
+# Desktop virtualization software
+cask "parallels"
+# PDF reader, editor and annotator
+cask "pdf-expert"
+# Control your tools with a few keystrokes
+cask "raycast"
+# Ebook reader
+cask "readest"
+# Team communication and collaboration software
+cask "slack"
+# Video game digital distribution service
+cask "steam"
+# Unpacks archive files
+cask "the-unarchiver"
+# Transcribes recorded music
+cask "transcribe"
+# Open-source BitTorrent client
+cask "transmission"
+# Multimedia player
+cask "vlc"
 # Multiplayer code editor
 cask "zed"
 # Multiplayer code editor
 cask "zed@preview"
-# OpenJDK distribution from Azul
-cask "zulu@8"
+# Video communication and virtual meeting platform
+cask "zoom"
+cargo "cargo-edit"
+cargo "flash"
 go "github.com/fern-api/protoc-gen-openapi/cmd/protoc-gen-openapi"
 npm "@fern-api/frond"
 npm "@fern-api/generator-cli"

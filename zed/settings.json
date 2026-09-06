@@ -17,4 +17,9 @@
     "light": "One Light",
     "dark": "0x96f Theme",
   },
+  "terminal": {
+    "shell": {
+      "program": "/opt/homebrew/bin/fish",
+    },
+  },
 }

@@ -1,6 +1,13 @@
 # AeroSpace config
-# Monitor 1 (laptop): pageable fullscreen Slack + Firefox
-# Monitor 2 (external): 2x2 Ghostty grid
+# Monitor 1 (laptop): Firefox only
+# Monitor 2 (external): everything else
+
+config-version = 2
+
+# In config-version 1 this list was inferred from the workspace key bindings.
+# Version 2 defaults it to empty, so the five workspaces are declared here;
+# without this an empty workspace vanishes instead of staying selectable.
+persistent-workspaces = ['S', 'F', 'L', 'T', 'E']
 
 after-login-command = []
 after-startup-command = [
@@ -29,16 +36,22 @@ outer.top = 8
 outer.bottom = 8
 
 # Bind workspaces to monitors
+# Only Firefox lives on the laptop display; everything else is on the external.
+# If no second monitor is attached, AeroSpace falls back to the built-in one.
 [workspace-to-monitor-force-assignment]
-S = 'main'        # Slack → laptop display
 F = 'main'        # Firefox → laptop display
-L = 'main'        # Linear -> laptop display
+S = 'secondary'   # Slack + Anki → external monitor
+L = 'secondary'   # Linear, Claude, Readest, PDF Expert → external monitor
 T = 'secondary'   # Terminals → external monitor
 E = 'secondary'   # Editors → external monitor
 
 # Auto-assign apps to workspaces
 [[on-window-detected]]
 if.app-id = 'com.tinyspeck.slackmacgap'
+run = 'move-node-to-workspace S'
+
+[[on-window-detected]]
+if.app-id = 'net.ankiweb.anki'
 run = 'move-node-to-workspace S'
 
 [[on-window-detected]]
@@ -55,6 +68,18 @@ run = 'move-node-to-workspace E'
 
 [[on-window-detected]]
 if.app-id = 'com.linear'
+run = 'move-node-to-workspace L'
+
+[[on-window-detected]]
+if.app-id = 'com.anthropic.claudefordesktop'
+run = 'move-node-to-workspace L'
+
+[[on-window-detected]]
+if.app-id = 'com.bilingify.readest'
+run = 'move-node-to-workspace L'
+
+[[on-window-detected]]
+if.app-id = 'com.readdle.PDFExpert-Mac'
 run = 'move-node-to-workspace L'
 
 # Key bindings
@@ -86,6 +111,8 @@ ctrl-x = 'close'
 ctrl-shift-s = 'move-node-to-workspace S'
 ctrl-shift-f = 'move-node-to-workspace F'
 ctrl-shift-t = 'move-node-to-workspace T'
+ctrl-shift-e = 'move-node-to-workspace E'
+ctrl-shift-a = 'move-node-to-workspace L'   # mirrors ctrl-a, as ctrl-l is taken
 
 alt-shift-semicolon = 'mode service'
 
